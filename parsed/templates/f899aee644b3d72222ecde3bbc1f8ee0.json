@@ -1,0 +1,3 @@
+{
+  "components/beautify/bottom-banner": "{{#if settings.data_tag_enabled}}\n    <div class=\"banners--bottom\" data-banner-location=\"bottom\">\n        {{#each (limit banners.bottom_metadata 1)}}\n            <div class=\"banner\" data-event-type=\"promotion\" data-entity-id=\"{{this.id}}\" data-name=\"{{this.banner-name}}\" data-position=\"{{this.location}}\" data-name=\"{{this.banner-name}}\">\n                <div data-event-type=\"promotion-click\">\n                    {{{this.content}}}\n                </div>\n            </div>\n        {{/each}}\n    </div>\n{{else}}\n    <div class=\"banners--bottom\" data-banner-location=\"bottom\">\n        <div class=\"banner\">\n            {{{limit banners.bottom 1}}}\n        </div>\n    </div>\n{{/if}}"
+}

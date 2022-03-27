@@ -1,0 +1,3 @@
+{
+  "components/beautify/footer-icons": "<div class=\"beautify__footerIcons\">\n    {{{region name=\"ssl_site_seal--global\"}}}\n    {{#if in_development}}\n        <img src=\"{{cdn 'img/iloveshopping.png'}}\" alt=\"I love shopping\" width=\"147\" height=\"40\" />\n    {{/if}}\n</div>\n"
+}

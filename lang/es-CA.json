@@ -1,0 +1,6 @@
+{
+    "header": {
+        "welcome_back": "Buen día!, {name}",
+        "sign_out": "Cerrar sesión"
+    }
+}
