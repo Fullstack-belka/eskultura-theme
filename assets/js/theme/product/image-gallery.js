@@ -115,7 +115,7 @@ export default class ImageGallery {
                 this.setActiveThumb();
             })
             .slick({
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: false,
                 initialSlide: this.currentSlideIndex,
