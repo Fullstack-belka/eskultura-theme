@@ -46,7 +46,7 @@
                                     {{/if}}
                                 {{/or}}
                             {{/if}}
-                            
+                            <!--
                             <div class="productView-stockLabel{{#or product.out_of_stock (unless product.can_purchase)}} _outstock{{/or}}{{#unless theme_settings.productpage_show_instock_badge}} _hideInStock{{/unless}}"
                                 data-instock-message="{{lang 'products.instock'}}"
                                 data-outstock-message="{{#if product.out_of_stock_message}}{{product.out_of_stock_message}}{{else}}{{lang 'products.sold_out'}}{{/if}}">
@@ -68,20 +68,26 @@
                                     {{/if}}
                                 {{/if}}
                             </div>
-
+                            -->
+                            <!-- 
                             {{#if product.brand}}
                                 <h5 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
                                     <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
                                 </h5>
                             {{/if}}
+                            -->
 
                             <div class="productView-titleWrapper">
                                 <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
                                 {{#if settings.show_wishlist}}
                                     {{> components/beautify/wishlist-dropdown}}
                                 {{/if}}
+                                
                             </div>
-                            
+                            <div class="productView-reference">
+                                <div class="productView-info-reference"{{#unless product.sku}} style="display: none;"{{/unless}}>{{lang 'products.reference'}}</div>
+                                <div class="productView-info-reference-value" data-product-sku>{{product.sku}}</div>
+                            </div>
                             {{#and schema product.sku}}
                                 <meta itemprop="sku" content="{{product.sku}}" />
                             {{/and}}
@@ -146,6 +152,7 @@
                                     {{/or}}
                                 {{/if}}
                             </div>
+                            
                             {{#if settings.bulk_discount_enabled}}
                                 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                                     <div class="productView-info-bulkPricing">
@@ -249,8 +256,7 @@
                         {{product.detail_messages}}
 
                         <dl class="productView-info">
-                            <dt class="productView-info-name productView-info-name--sku sku-label"{{#unless product.sku}} style="display: none;"{{/unless}}>{{lang 'products.sku'}}</dt>
-                            <dd class="productView-info-value productView-info-value--sku" data-product-sku>{{product.sku}}</dd>
+
                             <dt class="productView-info-name productView-info-name--upc upc-label"{{#unless product.upc}} style="display: none;"{{/unless}}>{{lang 'products.upc'}}</dt>
                             <dd class="productView-info-value productView-info-value--upc" data-product-upc>{{product.upc}}</dd>
                             <dt class="productView-info-name productView-info-name--mpn mpn-label" {{#unless product.mpn}} style="display: none;"{{/unless}}>{{lang 'products.mpn'}}</dt>
@@ -261,10 +267,7 @@
                                     <dd class="productView-info-value productView-info-value--condition">{{product.condition}}</dd>
                                 {{/if}}
                             {{/unless}}
-                            {{#if product.availability}}
-                                <dt class="productView-info-name productView-info-name--availability">{{lang 'products.availability'}}</dt>
-                                <dd class="productView-info-value productView-info-value--availability">{{product.availability}}</dd>
-                            {{/if}}
+                       
                             {{#all product.weight theme_settings.show_product_weight}}
                                 <dt class="productView-info-name productView-info-name--weight">{{lang 'products.weight'}}</dt>
                                 <dd class="productView-info-value productView-info-value--weight" data-product-weight>{{product.weight}}</dd>
@@ -363,10 +366,42 @@
                                     {{/each}}
                                     <div data-product-option-change>
                                         {{#each product.options}}
+                                        <hr class="productView-separator">
                                             {{{dynamicComponent 'components/products/options'}}}
                                         {{/each}}
                                     </div>
                                 </div>
+                                
+
+                                {{#unless in_quickview}}
+                                <hr class="productView-separator">
+                                <div class="container">{{/unless}}
+                                    <h2 class="beautify__page-heading productView-title-detail">{{lang 'products.description'}}</h2>
+                                    <button class="button button--plain button--toggle is-open" data-toggle="ih__desc-{{product.id}}">
+                                        <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
+                                        <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
+                                    </button>
+                                    <div class="productView-description-tabContent is-open" id="ih__desc-{{product.id}}" {{#if schema}} itemprop="description"{{/if}} {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
+                                        {{{product.description}}}
+                                        {{{snippet 'product_description'}}}
+                                    </div>
+                                    {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
+
+                                <hr class="productView-separator">
+                                <div class="container productView-shipping">
+                                    {{#if product.availability}}
+                                    <div class="productView-availability">
+                                        <div class="productView-info-name--availability">{{lang 'products.availability'}}</div>
+                                        <div class="productView-info-value--availability">{{product.availability}}</div>
+                                    </div>
+                                    {{/if}}
+                                    <div class="productView-link-tallas">
+                                        <a class="linkTallas" href="">Conoce Todo sobre tu envío</a>
+                                    </div>
+
+                                </div>
+
+                                <hr class="productView-separator">
 
                                 <div class="productView-qtyAddWrapper _addToCartVisibility{{#if theme_settings.productpage_sticky_addtocart}} _sticky{{/if}}" {{#unless product.can_purchase}}style="display:none"{{/unless}}>
                                     {{#if theme_settings.show_product_quantity_box}}
@@ -405,7 +440,7 @@
                                     {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                                         <div class="form-action form-action--addToCart">
                                             {{#or product.price.with_tax product.price.without_tax}}
-                                                <div class="price-section">
+                                                <div class="price-section" style="display: none;">
                                                     {{#if product.price.with_tax}}
                                                         <span data-product-price-with-tax class="price price--withTax price--main">{{product.price.with_tax.formatted}}</span>
                                                     {{else if product.price.without_tax}}

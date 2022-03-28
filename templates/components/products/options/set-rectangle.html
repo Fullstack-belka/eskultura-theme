@@ -25,4 +25,9 @@
             <span class="form-option-variant">{{this.label}}</span>
         </label>
     {{/each}}
+    {{#if this.display_name  '==' 'Tallas Disponibles'}}
+        <div class="productView-link-tallas">
+            <a class="linkTallas" href="">Guía de tallas</a>
+        </div>
+    {{/if}}
 </div>

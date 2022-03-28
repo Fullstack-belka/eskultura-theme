@@ -29,7 +29,7 @@
     padding-right: spacing("base");
 
     @include breakpoint("medium") {
-        width: grid-calc(6, $total-columns);
+        width: grid-calc(8, $total-columns);
     }
 }
 
@@ -41,7 +41,7 @@
     @include breakpoint("medium") {
         clear: right;
         float: right;
-        width: grid-calc(6, $total-columns);
+        width: grid-calc(4, $total-columns);
     }
 }
 

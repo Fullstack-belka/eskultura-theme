@@ -1,3 +1,8 @@
+
+
+@import "settings/global/color/color"; // 1
+
+
 // PASTE CUSTOM STYLING HERE
  aside#faceted-search-container {
         display:none;
@@ -98,9 +103,7 @@ button.button._submit {
     transform: scale(1.5);
     color: white;;
 }
-button.button:hover{
-    background: rgba(97,69,142,0.5);
-}
+
  .go3989562963 {
  
     transition: .4s all;
@@ -131,12 +134,9 @@ input#nl_email{
 p.u-hideMobile.u-hideTablet {
     display: none;
 }
-span.form-option-variant.form-option-variant--color {
-    border-radius: 60px;
-}
-label.form-option.form-option-swatch {
-    border-radius: 60px;
-}
+
+
+
 .footer-copyright {
     display: none;
 }
@@ -171,14 +171,7 @@ span._label {
     display: none;
 }
 
-button.button:hover {
-    background-color: white!important;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color:#54387F!important;
-  }
-  .footer .container{
+.footer .container{
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -206,6 +199,29 @@ h3 {
 ul.socialLinks.socialLinks--alt {
         display: none;
     }
-a:hover {
-        font-weight: bold;
-    }
+
+// PRODUCTOS
+.productView-options .form-radio:checked + .form-option{box-shadow: unset;}
+.productView-options .form-field[data-product-attribute="swatch"] .form-option{border: unset;}
+.form-option-variant--color{padding: 0 !important;}
+.productView-title{ color: $color-primary;}
+.productView-separator{margin: 15px 0;}
+
+
+.productView-options .form-field[data-product-attribute="set-rectangle"] .form-option{color: #727272;}
+.productView-options .form-field[data-product-attribute="set-rectangle"] .form-option .form-option-variant{ font-weight: 600; padding: 4px 6px;}
+.productView-options .form-field[data-product-attribute="set-rectangle"] .form-radio:checked + .form-option{ background-color: $color-primary;}
+.productView-options .form-field[data-product-attribute="set-rectangle"] .form-radio:checked + .form-option .form-option-variant{color: white;}
+span.form-option-variant.form-option-variant--color {border-radius: 50%;}
+label.form-option.form-option-swatch {border-radius: 50%;}
+.papathemes-productView-optionsGrid .form-label [data-option-value]{color:#C667FE;}
+.productView-options .form-label--alternate{font-size: 1rem; color:#C667FE;}
+.productView-options .productView-title-detail{font-size: 1rem; color:#C667FE; margin-top: 10px;}
+.productView-description-tabConten{font-size: .8rem;}
+.productView-info{margin-bottom: 0;}
+.productView-reference{display: flex; color: #727272; margin-bottom: 10px;}
+.productView-price{ margin-bottom: 10px;}
+.productView-availability{display: flex; margin-bottom: 10px;}
+.productView-info-name--availability{text-transform: uppercase; color: #727272;}
+.productView-info-value--availability{font-weight: 700; color: $color-primary; margin-left: 5px;}
+>>>>>>> 9366f2032040fd2aa82a0f9da41c517779fecc34
