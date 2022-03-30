@@ -179,27 +179,49 @@ span._label {
     grid-template-columns: repeat(5, 1fr);
     grid-gap:30px;
     padding: 35px 0px; 
+    color: #54387F;   
     
+}
+.footer{
+    background: #E9E4EF;
     
 }
 @media screen and (max-width:800px){
     .footer .container{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 30px 0px;
+        grid-gap: 30px;
+        padding: 25px 0px;
+        
     }
 }
 h3 {
     color: #54387F;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-style: roboto;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 .red-social2 {
     margin-top: 100px;}
 ul.socialLinks.socialLinks--alt {
         display: none;
     }
+    
+    .footer a {
+    color: #5E408F;
+    margin-top:3px;
+    font-weight: normal!important;
+}
+ // borrar seccoines home que no se usan 
+ 
+ .beautify__section.beautify__section--topProducts.beautify__section--displayType-carousel {
+    display: none;
+}
 
+.beautify__section.beautify__recentBlog {
+    display: none;
+}
 // PRODUCTOS
 .productView-options .form-radio:checked + .form-option{box-shadow: unset;}
 .productView-options .form-field[data-product-attribute="swatch"] .form-option{border: unset;}
@@ -224,4 +246,16 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .productView-availability{display: flex; margin-bottom: 10px;}
 .productView-info-name--availability{text-transform: uppercase; color: #727272;}
 .productView-info-value--availability{font-weight: 700; color: $color-primary; margin-left: 5px;}
->>>>>>> 9366f2032040fd2aa82a0f9da41c517779fecc34
+
+
+// vista prodcuto
+div#facetedSearch {display: flex; flex-wrap: wrap; }
+.page-sidebar {width: 100%;}
+._accordion._accordion--navList {display: flex;flex-wrap: wrap;}
+.page-sidebar + .page-content {width: 100%;}
+.facetedSearch-refineFilters.sidebarBlock { margin-right: 20px;}
+._accordion-navigation.toggleLink.is-open { padding-left: 10px;}
+h3.sidebarBlock-heading {color: #54387F; font-size: 0.5rem;}
+h4._accordion-title{color:#54387F; font-size: 0.5rem;}
+svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--on{border-right:solid 0.1rem #54387F; padding-right: 10px;}
+svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--off{border-right:solid 0.1rem #54387F; padding-right: 10px;}
