@@ -104,6 +104,7 @@ span._label {display: none;}
 .topContainer-header{ text-align: center; padding: 10px;}
 .topContainer-header p{text-transform: uppercase;}
 .topContainer-header .topLink-header{border: 1px solid #fff; padding: 3px 4px; margin-left: 20px; display: inline-flex;}
+.navPages-list{text-align: center;}
 
 .beautify__quickSearch .button._submit,
 .beautify__quickSearch .button._close{width: 16px; height: 16px; background: transparent;padding: 0;left: 14px;position: absolute;top: calc(50% - 9px);}
@@ -123,17 +124,14 @@ a.navPages-action:hover{color: #E7BDFE;}
 ._cart .navUser-action{margin: 0;}
 ._searchBar {order: 3!important; margin-right: 15px; max-width: 270px;}
 
-.footer .container{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap:30px;
-    padding: 35px 0px; 
-    color: #54387F;   
-    
-}
+.footer .container{width: 100%;max-width: 1200px;margin: auto;display:grid;grid-template-columns: repeat(5, 1fr);grid-gap:30px;padding: 35px 0px; color: #54387F;   }
+.footer .container .box{position: relative; border-right: 1px solid stencilColor("color-primary");}
+//.footer .container .box::after{content:''; display: flex; height: 100%; width: 1px; background-color: stencilColor("color-primary"); position: absolute; left: 0;}
+//.footer .container .box::after{content:''; display: flex; height: 100%; width: 1px; background-color: stencilColor("color-primary"); position: absolute; left: 0;}
+.footer .container .box ul{  list-style:none ; margin: 0;}
+.footer .container .box ul li::marker{ list-style-type: none;}
+.footer .container .box ul li{margin-bottom: 6px;}
+
 @media screen and (max-width:800px){
     .footer .container{
         width: 90%;
@@ -144,7 +142,7 @@ a.navPages-action:hover{color: #E7BDFE;}
 }
 
 h3 {color: #54387F;font-size: 0.8rem;font-weight: bold;margin-bottom: 15px;}
-.red-social2 {margin-top: 100px;}
+.red-social {margin-top: 40px;}
 ul.socialLinks.socialLinks--alt {display: none;}
 .footer a {color: #5E408F;margin-top:3px;}
 .footer a:hover{color: stencilColor("footer-secondary-linkColor-hover");}
@@ -178,8 +176,8 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 // NEWSLETTER
 .beautify__newsletter .page-heading{font-size: 2rem; color: white;font-weight: 400;}
 .beautify__newsletter .form-field{display: block;}
-.beautify__newsletter .form-field button{text-align: center; margin: auto;}
-.beautify__newsletter .form-field button:hover{background-color: white;}
+.beautify__newsletter .form-field button{text-align: center; margin: auto; transition: .4s all;}
+.beautify__newsletter .form-field button:hover{background-color: white; color: stencilColor("color-primary"); }
 
 // 404
 .page-404{ background: linear-gradient(#C5B9E7,#9F91CE); margin-top: 0;}
@@ -200,8 +198,8 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .page-error-404 .page-content .content-404 .content-buttons li{width: 50%; margin-bottom: 20px;}
 .page-error-404 .page-content .content-404 .content-buttons li::marker{display: none; content:''; }
 
-.content-404 .content-buttons li a {width: calc(100% - 20px);color: $color-primary;background-color: white;display: flex;text-decoration: unset;font-weight: bold;justify-content: center;margin: 0 10px;padding: 5px 10px;}
-
+.content-404 .content-buttons li a {width: calc(100% - 20px);color: $color-primary;background-color: white;display: flex;text-decoration: unset;font-weight: bold;justify-content: center;margin: 0 10px;padding: 5px 10px; transition: .4s all;}
+.content-404 .content-buttons li a:hover{transform: scale(1.06);}
 
 // vista categoria prodcuto
 div#facetedSearch {display: flex; flex-wrap: wrap; }
