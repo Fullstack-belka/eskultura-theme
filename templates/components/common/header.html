@@ -93,9 +93,9 @@
             </ul>
 
 
-            <div class="_searchBar">
-                {{> components/common/quick-search}}
-            </div>
+                <div class="_searchBar">
+                    {{> components/common/quick-search}}
+                </div>
  
                 {{#if currency_selector.currencies.length '>' 1}}
                     <div class="_currency">
@@ -122,13 +122,12 @@
                         
                 <div class="_account">
                     {{#if customer}}
-                        <a href="{{urls.account.index}}">
+                        <a href="{{urls.account.index}}" class="navUser-action navUser-action--login">
                             <span class="_label">{{lang 'common.account'}}</span>
                             <svg class="icon"><use xlink:href="#icon-account" /></svg>
                         </a>
                     {{else}}
-                        <a href="{{urls.auth.login}}">
-                     
+                        <a href="{{urls.auth.login}}" class="navUser-action navUser-action--login">                     
                             <svg class="icon"><use xlink:href="#icon-account" /></svg>
                         </a>
                     {{/if}}

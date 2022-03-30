@@ -1,29 +1,55 @@
 {{#partial "page"}}
 
-<main class="page">
+<!--{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}-->
+<main class="page page-error-404">
     <section class="page-content page-content--centered">
-        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-        <h1 class="page-heading u-textAlignCenter">{{lang 'page_not_found.page_heading'}}</h1>
-        <p class="u-textAlignCenter">
-            {{lang 'page_not_found.message'}}
-        </p>
+        <div class="image-wrap">
+            <figure>
+                <img src="" alt="">
+            </figure>
+        </div>
+        <div class="content-wrap">
 
-        {{> components/common/search-box}}
-        <div class="columna1" style="text-align: center">
-            <h3>¡Pero no te desanimes!</h3>
-            <p>Tenemos muchas cosas más esperándote.</p>
-            <p>¿Por qué no pruebas estas sugerencias</p>
-            <ul>
-            <a href="/"><input type="button" value="Volvamos al principio"></a>
-            <a href="/fajas"><input type="button" value="Quiero ver las fajas"></a> 
-            <a href="/trajes-de-ba-o"><input type="button" value="Merezco un traje de baño"></a> 
-            </ul>
-            <ul>
-            <a href="/promociones"><input type="button" value="¡Llévame a las promociones!"></a>
-            <a href="/accesorios"><input type="button" value="Me encantan los accesorios"></a>
-            <a href="/caballeros/"><input type="button" value="Quiero ver la ropa de hombre"></a>     
-            </ul>    
-    </div>
+        
+            <div class="title-404">
+                <h1 class="">{{lang 'page_not_found.page_heading'}}</h1>
+                <p class="">
+                    {{lang 'page_not_found.message'}}
+                </p>
+            </div>
+
+            {{> components/common/search-box}}
+            <div class="content-404">
+
+                <div class="sub-tittle-404">
+                    <h2>¡Pero no te desanimes!</h2>
+                    <p>Tenemos muchas cosas más esperándote.</br>
+                        ¿Por qué no pruebas estas sugerencias</p>
+                </div>
+                    
+                <ul class="content-buttons">
+                    <li>
+                        <a href="/">Volvamos al principio</a>
+                    </li>
+                    <li>
+                        <a href="/fajas">Quiero ver las fajas</a> 
+                    </li>
+                    <li>
+                        <a href="/trajes-de-bano">Merezco un traje de baño</a> 
+                    </li>
+                    <li>
+                        <a href="/promociones">¡Llévame a las promociones!</a>
+                    </li>
+                    <li>
+                        <a href="/accesorios">Me encantan los accesorios</a>
+                    </li>
+                    <li>
+                        <a href="/caballeros/">Quiero ver la ropa de hombre</a>     
+                    </li>
+                </ul>    
+            </div>
+
+        </div>
     </section>
 </main>
 

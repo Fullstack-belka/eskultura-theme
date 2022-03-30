@@ -237,7 +237,7 @@ iframe.zoid-component-frame {
 .beautify__section {
     @include clearfix;
     @media (max-width: screenSize("medium") - 1px) {
-        padding-top: spacing("single") * 1.5;
+        padding-top: spacing("single") * 1;
         padding-bottom: spacing("single") * 1.5;
     }
     @include breakpoint("medium") {

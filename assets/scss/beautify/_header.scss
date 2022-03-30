@@ -109,6 +109,7 @@
     @media (max-width: screenSize("medium") - 1px) {
         .container {
             padding-top: spacing("half");
+            padding-bottom: spacing("half");
         }
         ._searchBar {
             display: flex;
@@ -125,7 +126,7 @@
         }
     }
     @include breakpoint("medium") {
-        padding: spacing("base") 0 0;
+        padding: spacing("base") 0 spacing("base");
 
         @if $header-bg != $navPages-backgroundColor {
             padding-bottom: spacing("base");
@@ -483,10 +484,10 @@
         
         @media (max-width: screenSize("medium") - 1px) {
             background-color: stencilColor("quickSearch-bgColor-mobile");
-            height: remCalc(40px);
+            height: remCalc(30px);
         }
         @include breakpoint("medium") {
-            height: remCalc(45px);
+            height: remCalc(30px);
             border-color: stencilColor("quickSearch-borderColor");
         }
         &::placeholder {
