@@ -113,62 +113,53 @@ button.button._submit {
     background: #54387F;
 }
 
-.h2.page-heading{
-    color:white;
-}
-h3.footer-info-heading {
-    color: #54387F;
-}
-input#nl_email{
+.h2.page-heading{color:white;}
+
+h3.footer-info-heading {color: #54387F;}
+
+.beautify__newsletter #nl_email{
     width: 100%;
 	text-align: center;
-	padding: 2rem 0 1rem;
+	padding: 1rem 0 1rem;
+    border: 0;
 	border-bottom: solid .1rem white;
 	margin-bottom: 1rem;
-    background-color: #54387F;
-    border-left: none;
-    border-right: none;
-    border-top:none;
-    color:white;
-}
-p.u-hideMobile.u-hideTablet {
-    display: none;
-}
+    background-color: transparent;;color:white;}
+.beautify__newsletter #nl_email::placeholder{ color: white;}
+input:focus{	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;}
 
+p.u-hideMobile.u-hideTablet {display: none;}
+.footer-copyright {display: none;}
 
+.inhealth__footerBeforeCategoryDemo, .inhealth__footerBeforeCategoryDemo{display: none!important;}
+button.slick-prev.slick-arrow, button.slick-next.slick-arrow{background-color: #54387F;}
+a#scrollToTopFloatingButton{display: none;}
 
-.footer-copyright {
-    display: none;
-}
+a.powered-link {display: none;}
+h2.panel-title{color:#54387F}
+.new-customer-intro, li.new-customer-fact{color: #A50CFD;}
+span._label {display: none;}
+.beautify__footerIcons {display: none;}
 
-.inhealth__footerBeforeCategoryDemo, .inhealth__footerBeforeCategoryDemo{
-    display: none!important;
-}
-button.slick-prev.slick-arrow, button.slick-next.slick-arrow{
-    background-color: #54387F;
-}
-a#scrollToTopFloatingButton{
-    display: none;
-}
+// HEADER
+.topContainer-header{ text-align: center; padding: 10px;}
+.topContainer-header p{text-transform: uppercase;}
+.topContainer-header .topLink-header{border: 1px solid #fff; padding: 3px 4px; margin-left: 20px; display: inline-flex;}
 
-//{
-    //color: #E7BEFE!important;
-  //  font-size: 3rem!important;
-//}
-a.powered-link {
-    display: none;
-}
-h2.panel-title{
-    color:#54387F
-}
-.new-customer-intro, li.new-customer-fact{
-    color: #A50CFD;
-}
-span._label {
-    display: none;
-}
-.beautify__footerIcons {
-    display: none;
+.beautify__quickSearch .button._submit,
+.beautify__quickSearch .button._close{width: 16px; height: 16px; background: transparent;padding: 0;left: 14px;position: absolute;top: calc(50% - 9px);}
+.beautify__quickSearch .button._close{left: unset; right: 14px;}
+
+.beautify__quickSearch .button._submit .icon{fill: stencilColor("quickSearch-color"); }
+.beautify__quickSearch .form-input{padding-left: 45px; border-radius: 50px;}
+div#bf-fix-menu-mobile{background: #5E408F;color: white; border: 0;}
+a.navPages-action {color: white;}
+a.navPages-action:hover{color: #E7BDFE;}
+
+@media (min-width:  801px){
+    .navUser-action{margin: 0;}
 }
 
 .footer .container{
@@ -182,46 +173,24 @@ span._label {
     color: #54387F;   
     
 }
-.footer{
-    background: #E9E4EF;
-    
-}
 @media screen and (max-width:800px){
     .footer .container{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
         padding: 25px 0px;
-        
     }
-}
-h3 {
-    color: #54387F;
-    font-size: 0.8rem;
-    font-style: roboto;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-.red-social2 {
-    margin-top: 100px;}
-ul.socialLinks.socialLinks--alt {
-        display: none;
-    }
-    
-    .footer a {
-    color: #5E408F;
-    margin-top:3px;
-    font-weight: normal!important;
-}
- // borrar seccoines home que no se usan 
- 
- .beautify__section.beautify__section--topProducts.beautify__section--displayType-carousel {
-    display: none;
 }
 
-.beautify__section.beautify__recentBlog {
-    display: none;
-}
+h3 {color: #54387F;font-size: 0.8rem;font-weight: bold;margin-bottom: 15px;}
+.red-social2 {margin-top: 100px;}
+ul.socialLinks.socialLinks--alt {display: none;}
+.footer a {color: #5E408F;margin-top:3px;}
+.footer a:hover{color: stencilColor("footer-secondary-linkColor-hover");}
+ // borrar seccines home que no se usan 
+.beautify__section.beautify__section--topProducts.beautify__section--displayType-carousel {display: none;}
+.beautify__section.beautify__recentBlog {display: none;}
+
 // PRODUCTOS
 .productView-options .form-radio:checked + .form-option{box-shadow: unset;}
 .productView-options .form-field[data-product-attribute="swatch"] .form-option{border: unset;}
@@ -247,10 +216,15 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .productView-info-name--availability{text-transform: uppercase; color: #727272;}
 .productView-info-value--availability{font-weight: 700; color: $color-primary; margin-left: 5px;}
 
+// NEWSLETTER
+.beautify__newsletter .page-heading{font-size: 2rem; color: white;font-weight: 400;}
+.beautify__newsletter .form-field{display: block;}
+.beautify__newsletter .form-field button{text-align: center; margin: auto;}
+.beautify__newsletter .form-field button:hover{background-color: white;}
 
 // vista prodcuto
-div#facetedSearch {display: flex; flex-wrap: wrap; }
 .page-sidebar {width: 100%;}
+div#facetedSearch {display: flex; flex-wrap: wrap; }
 ._accordion._accordion--navList {display: flex;flex-wrap: wrap;}
 .page-sidebar + .page-content {width: 100%;}
 .facetedSearch-refineFilters.sidebarBlock { margin-right: 20px;}
@@ -259,7 +233,24 @@ h3.sidebarBlock-heading {color: #54387F; font-size: 0.5rem;}
 h4._accordion-title{color:#54387F; font-size: 0.5rem;}
 svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--on{border-right:solid 0.1rem #54387F; padding-right: 10px;}
 svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--off{border-right:solid 0.1rem #54387F; padding-right: 10px;}
-.facetedSearch ._accordion-content.is-open {position: absolute; z-index: 3; background: white;}
+.facetedSearch ._accordion-content.is-open {position: absolute; z-index: 3; background: white; padding: 3px;}
 ._accordion-block{position:relative}
-input.form-input.form-input--small {max-width:100px;}
+._accordion-navigation.toggleLink.is-open {min-width: 140px;}
+input.form-input.form-input--small {max-width:150px;}
+a.navList-action.navList-action--checkbox {min-width: 130px;}
+.form-field.form-field--input {min-width: 120px;}
+button.button.button--outline.button--small {background: white; }
+button.button.button--outline.button--small:hover {background: #A50CFD; color:white }
+
+// somos eskultura
+div#sd-image-c77675ad-824c-4fad-94fb-9e264c45efe3:hover{background: url(https://cdn11.bigcommerce.com/s-7srliiv4l2/product_images/uploaded_images/mision-b.jpg?t=1648741249&_gl=1*11q8f8t*_ga*MTM2MzQ5MTQ1NS4xNjM5NTk2ODcz*_ga_WS2VZYPC6G*MTY0ODc0NzQ4My4xMzcuMS4xNjQ4NzQ4MzI3LjM5);}
+video {height: 500px; width: 100%; object-fit: cover;
+}
+//pagina de inicio de sesion
+.panel-body {background: #ffff; border-left:solid #54387F 3px;}
+.panel-header {background: #ffff; border-left:solid #54387F 3px;}
+button.button.button--primary{background: white; color: #54387F; }
+button.button.button--primary:hover{background:#54387F; color: white; min-width: 200px; align-items: center;}
+form.login-form.form {margin-top: -15px;}
+
 
