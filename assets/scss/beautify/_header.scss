@@ -114,9 +114,7 @@
         ._searchBar {
             display: flex;
             align-items: center;
-            background-color: stencilColor("navPages-backgroundColor-mobile");
             margin: 0 (-(spacing("half")));
-            padding: spacing("half");
             clear: both;
             width: calc(100% + #{spacing("single")});
             order: 3;

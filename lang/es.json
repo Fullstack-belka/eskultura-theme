@@ -833,13 +833,13 @@
     },
     "newsletter": {
         "subscribe": "Newsletter",
-        "subscribe_submit": "Subscribe",
+        "subscribe_submit": "Enviar",
         "email_placeholder": "Ingresa tu correo",
-        "subscribed_heading": "Thanks for Subscribing!",
+        "subscribed_heading": "Gracias por suscribirte!",
         "subscribed_heading_error": "Oops...",
-        "subscribed_message": "Thank you for joining our mailing list. You'll be sent the next issue of our newsletter shortly",
+        "subscribed_message": "Gracias por unirte a nuestro Newsletter",
         "unsubscribed_heading": "Unsubscribed!",
-        "unsubscribed_message": "You will no longer receive marketing emails from <b>{store_name}</b>",
+        "unsubscribed_message": "Ya no recibiras correos electrónicos. <b>{store_name}</b>",
         "hide_popup_msg": "Don't show this popup again"
     },
     "social": {
@@ -861,12 +861,12 @@
             "clear_all": "Clear All"
         },
         "results": {
-            "form_label": "Search Keyword:",
-            "form_button_text": "Search",
+            "form_label": "Búsqueda:",
+            "form_button_text": "Buscar",
             "count": "{ count, plural, one {# result} other {# results} } for '{ search_query }'",
             "quick_count": "{ count, plural, one {# product result} other {# product results} } for '{ search_query }'",
-            "product_count": "Products ({count})",
-            "content_count": "News & Information ({count})"
+            "product_count": "Productos ({count})",
+            "content_count": "Nuevos e información ({count})"
         },
         "faceted": {
             "selected": {

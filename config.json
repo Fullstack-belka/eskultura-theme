@@ -1,6 +1,6 @@
 {
   "name": "Eskultura",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "meta": {
     "price": 24500,
     "documentation_url": "http://bc-kansha-docs.papathemes.com/",
@@ -144,11 +144,11 @@
     "default_image_brand": "img/BrandDefault.svg",
     "default_image_product": "img/ProductDefault.svg",
     "default_image_gift_certificate": "img/GiftCertificate.png",
-    "webfont_url": "https://fonts.google.com/specimen/Roboto",
-    "webfont-body-font": "Google_Cabin_400",
-    "webfont-headings-font": "Google_Cabin_700",
-    "body-font": "Google_Nunito_400,300,600,700",
-    "headings-font": "Google_Nunito_600",
+    "webfont_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900",
+    "webfont-body-font": "Google_Roboto_400",
+    "webfont-headings-font": "Google_Outfit_600",
+    "body-font": "Google_Roboto_400,300,600,700",
+    "headings-font": "Google_Outfit_600",
     "fontSize-root": "16",
     "fontSize-h1": "28",
     "fontSize-h2": "24",
@@ -673,11 +673,11 @@
         "default_image_brand": "img/BrandDefault.svg",
         "default_image_product": "img/ProductDefault.svg",
         "default_image_gift_certificate": "img/GiftCertificate.png",
-        "webfont_url": "https://fonts.google.com/specimen/Roboto",
-        "webfont-body-font": "Google_Cabin_400",
-        "webfont-headings-font": "Google_Cabin_700",
+        "webfont_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900",
+        "webfont-body-font": "Google_Roboto_400",
+        "webfont-headings-font": "Google_Outfit_600",
         "body-font": "Google_Nunito_400,300,600,700",
-        "headings-font": "Google_Nunito_600",
+        "headings-font": "Google_Outfit_600",
         "fontSize-root": "16",
         "fontSize-h1": "28",
         "fontSize-h2": "24",
@@ -1044,7 +1044,7 @@
         "show_yotpo": false,
         "widget_reviews_slides": 4,
         "widget_products_feed_col": 5,
-        "newsletter_heading": "SUSCRÍBETE A NUESTRO BOLETÍN"
+        "newsletter_heading": "SUSCRÍBETE A NUESTRO <strong>BOLETÍN"
       }
     }
   ]
