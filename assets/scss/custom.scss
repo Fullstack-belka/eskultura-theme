@@ -172,9 +172,12 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .productView-availability{display: flex; margin-bottom: 10px;}
 .productView-info-name--availability{text-transform: uppercase; color: #727272;}
 .productView-info-value--availability{font-weight: 700; color: $color-primary; margin-left: 5px;}
+.productView-link-tallas:hover{font-weight: normal;}
+
 
 // NEWSLETTER
 .beautify__newsletter .page-heading{font-size: 2rem; color: white;font-weight: 400;}
+.beautify__newsletter .page-heading .icon{fill: white;}
 .beautify__newsletter .form-field{display: block;}
 .beautify__newsletter .form-field button{text-align: center; margin: auto; transition: .4s all;}
 .beautify__newsletter .form-field button:hover{background-color: white; color: stencilColor("color-primary"); }

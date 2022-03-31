@@ -18,6 +18,7 @@
         <div role="tabpanel" class="tab-content has-jsContent is-active" id="tab-related">
             <div class="container">
                 <h2 class="beautify__page-heading">{{theme_settings.productpage_related_products_title}}</h2>
+                <p class="beautify__page-lead">{{theme_settings.productpage_related_products_lead}}</p>
                 {{#if settings.data_tag_enabled}}
                     {{> components/products/carousel products=product.related_products columns=5 list="Related Products"}}
                 {{else}}
@@ -30,10 +31,31 @@
     {{{region name="product_below_related"}}}
     {{{region name="product_below_related--global"}}}
 
+
+    {{{region name="product_reviews"}}}
+    {{#if settings.show_product_reviews}}
+        <div class="tab-content" id="tab-reviews">
+            {{#unless in_quickview}}<div class="container">{{/unless}}
+            <h2 class="beautify__page-heading _hasToggle">{{lang 'products.reviews.title' total=product.num_reviews}}</h2>
+            <button class="button button--plain button--toggle is-open" data-toggle="ih__reviews-{{product.id}}">
+                <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
+                <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
+            </button>
+            <div class="productView-description-tabContent is-open" id="ih__reviews-{{product.id}}">
+                {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+            </div>
+            {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
+        </div>
+    {{/if}}
+
+
+
+
     {{#if product.similar_by_views}}
         <div role="tabpanel" class="tab-content has-jsContent is-active" id="tab-similar">
             <div class="container">
                 <h2 class="beautify__page-heading">{{theme_settings.productpage_similar_by_views_title}}</h2>
+                <p class="beautify__page-lead">{{theme_settings.productpage_similar_by_views_lead}}</p>
                 {{> components/products/carousel products=product.similar_by_views columns=5 list="Customers Also Viewed"}}
             </div>
         </div>
