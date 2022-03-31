@@ -12,7 +12,7 @@
         display:none;
     }
 
-a.powered-link {
+    a.powered-link {
     display: none!important;
 }
 h1.page-heading {text-align: center;width: 100%;padding: 7px;font-size: 5rem;text-transform: uppercase; letter-spacing: 5px;}
@@ -20,6 +20,10 @@ h1.page-heading {text-align: center;width: 100%;padding: 7px;font-size: 5rem;tex
 main#product-listing-container {
     margin-left: 10%;
 }
+input#search_query {
+    margin-top: 19px;
+}
+
 
 .category-list .container-header a{
     text-decoration: blink;
@@ -47,9 +51,48 @@ h1.page-heading, h2.page-heading.showcase-products, h2.page-heading  {
 article.store-info {
     display: none;
 }
-input.button.button--primary {margin-bottom: 10px;}
-.beautify__mainHeader._hasImg._left {background: #F9F5FF;}
+input.button.button--primary {
+    margin-bottom: 10px;
+}
+main.page404 {
+    //background: black;
+    background-image: url("FONDO 404.jpg");
+}
+div#bf-fix-menu-mobile{
+    background: #5E408F;
+    color: white;
 
+}
+a.navPages-action {
+    color: white;
+}
+a.navPages-action:hover{
+    color: #E7BDFE;
+}
+.beautify__mainHeader._hasImg._left {
+    background: #F9F5FF;
+}
+input#search_query {
+    border-radius: 50px;
+}
+._account{
+    order: 4;
+    padding: 10px;
+}
+._cart{
+    order: 5;
+    position: relative;
+}
+input#search_query {
+    margin-bottom: 14px;
+}
+button.button._submit {
+    display: none;
+}
+
+._searchBar {
+    order: 3!important;
+}
 .go2405723030 {
     color: #E7BDFE!important;
 }
@@ -118,10 +161,6 @@ a.navPages-action:hover{color: #E7BDFE;}
 @media (min-width:  801px){
     .navUser-action{margin: 0;}
 }
-._account{order: 4; margin-right: 10px;}
-._cart{order: 5;position: relative;}
-._cart .navUser-action{margin: 0;}
-._searchBar {order: 3!important; margin-right: 15px; max-width: 270px;}
 
 .footer .container{width: 100%;max-width: 1200px;margin: auto;padding: 35px 0px; color: #54387F;  display: flex; justify-content: center; flex-wrap: wrap;}
 .footer .container .box{position: relative;  padding: 0 30px; width: 20%;}
@@ -158,6 +197,8 @@ ul.socialLinks.socialLinks--alt {display: none;}
 .form-option-variant--color{padding: 0 !important;}
 .productView-title{ color: $color-primary;}
 .productView-separator{margin: 15px 0;}
+
+
 .productView-options .form-field[data-product-attribute="set-rectangle"] .form-option{color: #727272;}
 .productView-options .form-field[data-product-attribute="set-rectangle"] .form-option .form-option-variant{ font-weight: 600; padding: 4px 6px;}
 .productView-options .form-field[data-product-attribute="set-rectangle"] .form-radio:checked + .form-option{ background-color: $color-primary;}
@@ -227,6 +268,7 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 // vista categoria prodcuto
 div#facetedSearch {display: flex; flex-wrap: wrap; }
 .page-sidebar {width: 100%;}
+div#facetedSearch {display: flex; flex-wrap: wrap; }
 ._accordion._accordion--navList {display: flex;flex-wrap: wrap;}
 .page-sidebar + .page-content {width: 100%;}
 .facetedSearch-refineFilters.sidebarBlock { margin-right: 20px;}
@@ -235,4 +277,23 @@ h3.sidebarBlock-heading {color: #54387F; font-size: 0.5rem;}
 h4._accordion-title{color:#54387F; font-size: 0.5rem;}
 svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--on{border-right:solid 0.1rem #54387F; padding-right: 10px;}
 svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--off{border-right:solid 0.1rem #54387F; padding-right: 10px;}
+.facetedSearch ._accordion-content.is-open {position: absolute; z-index: 3; background: white; padding: 3px;}
+._accordion-block{position:relative}
+._accordion-navigation.toggleLink.is-open {min-width: 140px;}
+input.form-input.form-input--small {max-width:150px;}
+a.navList-action.navList-action--checkbox {min-width: 130px;}
+.form-field.form-field--input {min-width: 120px;}
+button.button.button--outline.button--small {background: white; }
+button.button.button--outline.button--small:hover {background: #A50CFD; color:white }
+
+// somos eskultura
+div#sd-image-c77675ad-824c-4fad-94fb-9e264c45efe3:hover{background: url(https://cdn11.bigcommerce.com/s-7srliiv4l2/product_images/uploaded_images/mision-b.jpg?t=1648741249&_gl=1*11q8f8t*_ga*MTM2MzQ5MTQ1NS4xNjM5NTk2ODcz*_ga_WS2VZYPC6G*MTY0ODc0NzQ4My4xMzcuMS4xNjQ4NzQ4MzI3LjM5);}
+.page-somos-video video {height: 500px; width: 100%; object-fit: cover;}
+//pagina de inicio de sesion
+.panel-body {background: #ffff; border-left:solid #54387F 3px;}
+.panel-header {background: #ffff; border-left:solid #54387F 3px;}
+button.button.button--primary{background: white; color: #54387F; }
+button.button.button--primary:hover{background:#54387F; color: white; min-width: 200px; align-items: center;}
+form.login-form.form {margin-top: -15px;}
+
 
