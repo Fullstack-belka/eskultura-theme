@@ -449,7 +449,7 @@
                                                 </div>
                                             {{/or}}
                                             <button id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" class="button button--primary" type="submit">
-                                                {{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}
+                                                {{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}} <svg class="icon"><use xlink:href="#icon-cart" /></svg> {{lang 'products.add_to_cart'}}{{/if}}
                                             </button>
                                         </div>
                                         {{{snippet 'product_addtocart'}}}
@@ -641,6 +641,7 @@
                     </div>
                 {{/any}}
             {{/all}}
+        
             {{#if product.warranty}}
                 <div class="tab-content" id="tab-warranty">
                     {{#unless in_quickview}}<div class="container">{{/unless}}
@@ -651,21 +652,6 @@
                     </button>
                     <div class="productView-description-tabContent is-open" id="ih__warranty-{{product.id}}">
                         {{{product.warranty}}}
-                    </div>
-                    {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
-                </div>
-            {{/if}}
-
-            {{#if settings.show_product_reviews}}
-                <div class="tab-content" id="tab-reviews">
-                    {{#unless in_quickview}}<div class="container">{{/unless}}
-                    <h2 class="beautify__page-heading _hasToggle">{{lang 'products.reviews.title' total=product.num_reviews}}</h2>
-                    <button class="button button--plain button--toggle is-open" data-toggle="ih__reviews-{{product.id}}">
-                        <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
-                        <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
-                    </button>
-                    <div class="productView-description-tabContent is-open" id="ih__reviews-{{product.id}}">
-                        {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
                     </div>
                     {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
                 </div>
