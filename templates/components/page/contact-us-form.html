@@ -8,51 +8,51 @@
     <div class="form-row form-row--half">
         {{#if forms.contact.name}}
             <div class="form-field">
-                <label class="form-label" for="contact_fullname">{{lang 'forms.contact_us.full_name'}}</label>
-                <input class="form-input" type="text" id="contact_fullname" name="contact_fullname" value="{{customer.name}}">
+                <label class="form-label" for="contact_fullname"></label>
+                <input class="form-input" type="text" placeholder="{{lang 'forms.contact_us.full_name'}}" id="contact_fullname" name="contact_fullname" value="{{customer.name}}">
             </div>
         {{/if}}
         {{#if forms.contact.phone}}
             <div class="form-field">
-                <label class="form-label" for="contact_phone">{{lang 'forms.contact_us.phone'}}</label>
-                <input class="form-input" type="text" id="contact_phone" name="contact_phone" value="{{customer.phone}}">
+                <label class="form-label" for="contact_phone"></label>
+                <input class="form-input" type="text" placeholder="{{lang 'forms.contact_us.phone'}}" id="contact_phone" name="contact_phone" value="{{customer.phone}}">
             </div>
         {{/if}}
 
         <div class="form-field">
-            <label class="form-label" for="contact_email">{{lang 'forms.contact_us.email'}}
+            <label class="form-label" for="contact_email">
                 <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
             </label>
-            <input class="form-input" type="text" id="contact_email" name="contact_email" value="{{customer.email}}">
+            <input class="form-input" type="text" placeholder="{{lang 'forms.contact_us.email'}}" id="contact_email" name="contact_email" value="{{customer.email}}">
         </div>
 
         {{#if forms.contact.order}}
             <div class="form-field">
-                <label class="form-label" for="contact_orderno">{{lang 'forms.contact_us.order'}}</label>
-                <input class="form-input" type="text" id="contact_orderno" name="contact_orderno">
+                <label class="form-label" for="contact_orderno"></label>
+                <input class="form-input" type="text" placeholder="{{lang 'forms.contact_us.order'}}" id="contact_orderno" name="contact_orderno">
             </div>
         {{/if}}
 
         {{#if forms.contact.company}}
             <div class="form-field">
-                <label class="form-label" for="contact_companyname">{{lang 'forms.contact_us.company'}}</label>
-                <input class="form-input" type="text" id="contact_companyname" name="contact_companyname">
+                <label class="form-label" for="contact_companyname"></label>
+                <input class="form-input" type="text" placeholder="{{lang 'forms.contact_us.company'}}" id="contact_companyname" name="contact_companyname">
             </div>
         {{/if}}
 
         {{#if forms.contact.rma}}
             <div class="form-field">
-                <label class="form-label" for="contact_rma">{{lang 'forms.contact_us.rma'}}</label>
-                <input class="form-input" type="text" id="contact_rma" name="contact_rma">
+                <label class="form-label" for="contact_rma"></label>
+                <input class="form-input" type="text" placeholder="{{lang 'forms.contact_us.rma'}}" id="contact_rma" name="contact_rma">
             </div>
         {{/if}}
     </div>
 
     <div class="form-field">
-        <label class="form-label" for="contact_question">{{lang 'forms.contact_us.question'}}
-            <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
+        <label class="form-label" for="contact_question">
+            <small class="_required" title="{{lang 'common.required'}}"></small>
         </label>
-        <textarea name="contact_question" id="contact_question" rows="5" cols="50" class="form-input"></textarea>
+        <textarea name="contact_question" id="contact_question" placeholder="{{lang 'forms.contact_us.question'}}{{lang 'common.required_symbol'}}" rows="5" cols="50" class="form-input"></textarea>
     </div>
 
     {{{forms.contact.recaptcha.markup}}}
@@ -61,3 +61,4 @@
         <input class="button button--primary" type="submit" value="{{lang 'forms.contact_us.submit' }}">
     </div>
 </form>
+<div class="mapa-tienda"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.2567802664785!2d-67.14032558608007!3d18.198120087597534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c02b3b46f888fd3%3A0x19d2daa351e25ed9!2s100-112%20Calle%20Buena%20Vista%2C%20Mayag%C3%BCez%2C%2000680%2C%20Puerto%20Rico!5e0!3m2!1ses-419!2sco!4v1648843163673!5m2!1ses-419!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>

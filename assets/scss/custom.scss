@@ -319,8 +319,14 @@ div#sd-image-c77675ad-824c-4fad-94fb-9e264c45efe3:hover{background: url(https://
 //pagina de inicio de sesion
 .panel-body {background: #ffff; border-left:solid #54387F 3px;}
 .panel-header {background: #ffff; border-left:solid #54387F 3px;}
-button.button.button--primary{background: white; color: #54387F; }
-button.button.button--primary:hover{background:#54387F; color: white; min-width: 200px; align-items: center;}
-form.login-form.form {margin-top: -15px;}
+button.button.button--primary{background: white; color: #54387F; min-width: 100%;}
+button.button.button--primary:hover{background:#54387F; color: white; min-width: 200px; align-items: center; min-width: 100%;}
+form.login-form.form {margin-top: -10px;}
+input.button.button--primary { min-width: 100%;background:#54387F; color: white;} 
+input.button.button--primary:hover { min-width: 100%;background:white; color: #54387F;} 
+label.form-label {display: none;}
+.login-form.form input::not([type="submit"]){background: #C5B9E7;}
 
-
+//pagina de escribenos
+.mapa-tienda{ height: 400px; width: 100%;}
+.form-input{background: #FAF1FF; color: #54387F!important;}
