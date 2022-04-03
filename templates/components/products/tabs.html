@@ -34,17 +34,72 @@
 
     {{{region name="product_reviews"}}}
     {{#if settings.show_product_reviews}}
-        <div class="tab-content" id="tab-reviews">
+        <div class="tab-content" id="tab-reviews">            
             {{#unless in_quickview}}<div class="container">{{/unless}}
             <h2 class="beautify__page-heading _hasToggle">{{lang 'products.reviews.title' total=product.num_reviews}}</h2>
-            <button class="button button--plain button--toggle is-open" data-toggle="ih__reviews-{{product.id}}">
-                <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
-                <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
-            </button>
-            <div class="productView-description-tabContent is-open" id="ih__reviews-{{product.id}}">
-                {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+
+            <div class="productView-description-tabContent is-open" id="ih__reviews-{{product.id}}">                
+                <div class="item productView-rating-number">
+                    {{#if settings.show_product_rating}}
+                        {{#if product.num_reviews '>' 0}}
+                            <span class="productView-reviewLink productView-number">
+                                {{product.num_reviews}}
+                            </span>
+                            <p>{{lang 'products.reviews.recommend' total=product.num_reviews}}</p> 
+                            <div class="productView-rating">
+                                {{> components/products/ratings rating=product.rating}}
+                                {{#if product.num_reviews '>' 0}}
+                                {{#if settings.show_product_reviews}}
+                                        <span class="productView-reviewLink">
+                                            <a href="{{product.url}}{{#if is_ajax}}#write_review{{/if}}"
+                                                {{#unless is_ajax}}
+                                                    data-reveal-id="modal-review-form"
+                                                {{else}}
+                                                    {{#unless in_quickview}}
+                                                        data-reveal-id="modal-review-form"
+                                                    {{/unless}}
+                                                {{/unless}}
+                                            >
+                                            {{lang 'products.reviews.new'}}
+                                            </a>
+                                        </span>
+                                    {{/if}}
+                                {{else}}
+                                    <button class="button _writeReview" data-reveal-id="modal-review-form">{{lang 'products.reviews.new'}}</button>
+                                {{/if}}  
+                            </div>                        
+                        {{/if}}
+                    {{/if}}
+             
+                </div>     
+                <div class="item productView-rating-quality">
+                    <figure>
+                        <img src="{{cdn 'img/ico/ico_calidad_reviews.png'}}" alt="Ajuste al tallaje" width="115px" height="115px">
+                    </figure>
+                    <h3>Calidad</h3>
+                    <p>Excelente</p>
+                </div>
+                <div class="item productView-rating-confort">
+                    <figure>
+                        <img src="{{cdn 'img/ico/ico_comodidad_reviews.png'}}" alt="Comodidad muy buena" width="115px" height="115px">
+                    </figure>
+                    <h3>Comodidad</h3>
+                    <p>Muy buena</p>
+                </div>  
+                <div class="item productView-rating-ajust">
+                    </figure>   
+                        <img src="{{cdn 'img/ico/ico_calidad_talla_reviews.png'}}" alt="Ajuste al tallaje" width="75px" height="115px">
+                    </figure>
+                    <h3>Ajuste al tallaje</h3>
+                    <p>Se Ajusta Adecuadamente</p>
+                </div>  
             </div>
             {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
+        </div>
+        <div class="reviews-comments">
+            <div class="container">
+                {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+            </div>
         </div>
     {{/if}}
 

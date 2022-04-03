@@ -144,7 +144,7 @@
     "default_image_brand": "img/BrandDefault.svg",
     "default_image_product": "img/ProductDefault.svg",
     "default_image_gift_certificate": "img/GiftCertificate.png",
-    "webfont_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900",
+    "webfont_url": "https://fonts.googleapis.com/css2?family=Outfit",
     "webfont-body-font": "Google_Roboto_400",
     "webfont-headings-font": "Google_Outfit_600",
     "body-font": "Google_Roboto_400,300,600,700",
@@ -673,7 +673,7 @@
         "default_image_brand": "img/BrandDefault.svg",
         "default_image_product": "img/ProductDefault.svg",
         "default_image_gift_certificate": "img/GiftCertificate.png",
-        "webfont_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900",
+        "webfont_url": "https://fonts.googleapis.com/css2?family=Outfit",
         "webfont-body-font": "Google_Roboto_400",
         "webfont-headings-font": "Google_Outfit_600",
         "body-font": "Google_Nunito_400,300,600,700",
@@ -760,7 +760,7 @@
         "icon-color": "#111111",
         "icon-color-hover": "#5E408F",
         "icon-ratingEmpty": "#E5E5E5",
-        "icon-ratingFull": "#00B67A",
+        "icon-ratingFull": "#deb313",
         "carousel-bgColor": "#ffffff",
         "carousel-bgColor-opacity": "0",
         "carousel-title-color": "#000000",
@@ -1044,7 +1044,7 @@
         "show_yotpo": false,
         "widget_reviews_slides": 4,
         "widget_products_feed_col": 5,
-        "newsletter_heading": "SUSCRÍBETE A NUESTRO <strong>BOLETÍN"
+        "newsletter_heading": "SUSCRÍBETE A NUESTRO BOLETÍN"
       }
     }
   ]

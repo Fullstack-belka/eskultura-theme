@@ -395,8 +395,8 @@
                                         <div class="productView-info-value--availability">{{product.availability}}</div>
                                     </div>
                                     {{/if}}
-                                    <div class="productView-link-tallas">
-                                        <a class="linkTallas" href="">Conoce Todo sobre tu envío</a>
+                                    <div class="productView-link-container">
+                                        <a class="productView-link link-envios" href=""><span class="icon ico-envios-product"></span> Conoce Todo sobre tu envío</a>
                                     </div>
 
                                 </div>
@@ -538,11 +538,7 @@
                         <a class="tab-title" href="#tab-return">{{theme_settings.productpage_delivery_tab_title}}</a>
                     </li>
                 {{/or}}
-                {{#if settings.show_product_reviews}}
-                <li class="tab tab--reviews">
-                    <a class="tab-title productView-reviewTabLink" href="#tab-reviews">{{lang 'products.reviews.title' total=product.num_reviews}}</a>
-                </li>
-                {{/if}}
+
             </ul>
             <div class="tab-content is-active" id="tab-description">
                 {{#unless in_quickview}}<div class="container">{{/unless}}

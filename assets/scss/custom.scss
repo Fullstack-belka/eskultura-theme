@@ -63,9 +63,8 @@ div#bf-fix-menu-mobile{
     color: white;
 
 }
-a.navPages-action {
-    color: white;
-}
+.navPages-action:hover, .navPages-action:focus, .navPages-action:active{color: white;}
+a.navPages-action {color: white; font-weight: 400;}
 a.navPages-action:hover{
     color: #E7BDFE;
 }
@@ -116,25 +115,21 @@ button.button._submit {
 
 h3.footer-info-heading {color: #54387F;}
 
-.beautify__newsletter #nl_email{
-    width: 100%;
-	text-align: center;
-	padding: 1rem 0 1rem;
-    border: 0;
-	border-bottom: solid .1rem white;
-	margin-bottom: 1rem;
-    background-color: transparent;;color:white;}
-.beautify__newsletter #nl_email::placeholder{ color: white;}
-input:focus{	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;}
+
+input:focus{	-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
 
 p.u-hideMobile.u-hideTablet {display: none;}
 .footer-copyright {display: none;}
-
 .inhealth__footerBeforeCategoryDemo, .inhealth__footerBeforeCategoryDemo{display: none!important;}
-button.slick-prev.slick-arrow, button.slick-next.slick-arrow{background-color: #54387F;}
+button.slick-prev.slick-arrow, button.slick-next.slick-arrow{background-color: transparent;}
+
+.slick-next::before, .slick-prev::before{width: 30px; height: 2rem;}
+.slick-next::before{background-image: url('../img/ico/ico_arrow_slide_r.png');}
+.slick-prev::before{background-image: url('../img/ico/ico_arrow_slide_r.png'); transform: rotate(180deg); }
+
 a#scrollToTopFloatingButton{display: none;}
+
+
 
 a.powered-link {display: none;}
 h2.panel-title{color:#54387F}
@@ -198,7 +193,6 @@ ul.socialLinks.socialLinks--alt {display: none;}
 .productView-title{ color: $color-primary;}
 .productView-separator{margin: 15px 0;}
 
-
 .productView-options .form-field[data-product-attribute="set-rectangle"] .form-option{color: #727272;}
 .productView-options .form-field[data-product-attribute="set-rectangle"] .form-option .form-option-variant{ font-weight: 600; padding: 4px 6px;}
 .productView-options .form-field[data-product-attribute="set-rectangle"] .form-radio:checked + .form-option{ background-color: $color-primary;}
@@ -215,14 +209,47 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .productView-availability{display: flex; margin-bottom: 10px;}
 .productView-info-name--availability{text-transform: uppercase; color: #727272;}
 .productView-info-value--availability{font-weight: 700; color: $color-primary; margin-left: 5px;}
-.productView-link-tallas:hover{font-weight: normal;}
+.productView-link-container .productView-link{text-decoration: unset; display: flex; align-items: center;}
+.productView-link-container .productView-link:hover{font-weight: normal;}
+.productView-link-container .productView-link.link-envios{font-weight: 700; text-transform: uppercase;letter-spacing: 1px;}
+.productView-link-container .ico-tallas-product{content: ''; width: 36px; height: 24px; background: url('../img/ico/ico_tallas_product.png') no-repeat center / 100%; margin-right: 10px;}
+.productView-link-container .ico-envios-product{content: ''; width: 36px; height: 24px; background: url('../img/ico/ico_conoce_envio.png') no-repeat center / 100%; margin-right: 10px;}
+
+.productView-description .tabs .tab{margin: 0;}
+.productView-description .tabs .tab .tab-title{border-right: 1px solid $color-primary; padding: 10px 20px;}
+.productView-description .tabs .tab:last-child .tab-title{border-right:unset;}
+.productView-description .tabs{background: unset;}
+.productView-description .tab.is-active .tab-title{color: $color-primary;}
+.tab-title:hover, .tab-title:focus{color: $color-primary;}
+
+#tab-reviews{ background-color: $color-primary; color: white;}
+#tab-reviews .productView-reviewLink a:hover{ color: white;}
+#tab-reviews .beautify__page-heading{color: #ffffffa1; font-size: 4rem;text-transform: uppercase; letter-spacing: 4px;}
+#tab-reviews .productView-rating{justify-content: center;}
+#tab-reviews .productView-description-tabContent{display: flex; justify-content: center; justify-content: center;align-items: flex-end;}
+#tab-reviews .productView-description-tabContent .item .productView-number{font-size: 9rem; font-weight: 800; line-height: 8rem;}
+#tab-reviews .productView-description-tabContent .item{color: white; padding: 5px 25px; margin-right: 30px; text-align: center;}
+#tab-reviews .productView-description-tabContent .item:last-child{ margin-right: 0;}
+#tab-reviews .productView-description-tabContent .item figure img{margin-bottom: 5px;}
+#tab-reviews .productView-description-tabContent .item img{width: auto; margin: auto;}
+#tab-reviews .productView-description-tabContent .item h3{color:white; text-transform: uppercase; letter-spacing: 2px; font-size: 1.6rem; text-align: center;}
+#tab-reviews .productView-description-tabContent .item p{color: white; font-size: 1rem; margin-bottom: 0; text-transform: uppercase;}
+
+.reviews-comments{padding: 30px 15px;}
+.reviews-comments .productReviews-list{ column-count: 1;}
+.reviews-comments .productReviews-list li.productReview{ width: 100%;margin: 15px 10px; border: 0; box-shadow: unset; border-bottom: 1px solid #dddddd;  }
+.reviews-comments .productReviews-list li.productReview article{display: flex; justify-self: center; }
+.reviews-comments .productReviews-list li.productReview article header{width: 35%;}
+.reviews-comments .productReviews-list li.productReview article .productReview-body{width: 100%;}
 
 // NEWSLETTER
 .beautify__newsletter .page-heading{font-size: 2rem; color: white;font-weight: 100;}
-.beautify__newsletter .page-heading .icon-newsletter{content: ''; width: 28px; height: 28px; background: url('/assets/img/ico-boletin.png') no-repeat center / 100%; margin-right: 10px;}
+.beautify__newsletter .page-heading .icon-newsletter{content: ''; width: 28px; height: 28px; background: url('../img/ico-boletin.png') no-repeat center / 100%; margin-right: 10px;}
 .beautify__newsletter .form-field{display: block;}
 .beautify__newsletter .form-field button{text-align: center; margin: auto; transition: .4s all;}
 .beautify__newsletter .form-field button:hover{background-color: white; color: stencilColor("color-primary"); }
+.beautify__newsletter .form-input{width: 100%;text-align: center;padding: 1rem 0 1rem;border: 0;border-bottom: solid .1rem white;margin-bottom: 1rem;background-color: transparent;;color:white;}
+.beautify__newsletter .form-input::placeholder{ color: white;}
 
 // 404
 .page-404{ background: linear-gradient(#C5B9E7,#9F91CE); margin-top: 0;}
