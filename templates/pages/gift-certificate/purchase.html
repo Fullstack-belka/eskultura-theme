@@ -32,32 +32,32 @@
                     <div class="form-field">
                         <label class="form-label" for="from_name">
                             {{lang 'forms.gift_certificate.purchase.from_name' }}
-                            <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
+                            <small class="_required" title="{{lang 'common.required'}}"></small>
                         </label>
-                        <input type="text" class="form-input" name="from_name" id="from_name" value="{{forms.gift_certificate.values.from_name}}">
+                        <input type="text" class="form-input" placeholder="{{lang 'common.required_symbol'}}" name="from_name" id="from_name" value="{{forms.gift_certificate.values.from_name}}">
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="from_email">
                             {{lang 'forms.gift_certificate.purchase.from_email' }}
-                            <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
+                            <small class="_required" title="{{lang 'common.required'}}"></small>
                         </label>
-                        <input type="text" class="form-input" name="from_email" id="from_email" value="{{forms.gift_certificate.values.from_email}}">
+                        <input type="text" class="form-input" name="from_email" placeholder="{{lang 'common.required_symbol'}}" id="from_email" value="{{forms.gift_certificate.values.from_email}}">
                     </div>
                 </div>
                 <div class="form-row form-row--half">
                     <div class="form-field">
                         <label class="form-label" for="to_name">
                             {{lang 'forms.gift_certificate.purchase.to_name' }}
-                            <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
+                            <small class="_required" title="{{lang 'common.required'}}"></small>
                         </label>
-                        <input type="text" class="form-input" name="to_name" id="to_name" value="{{forms.gift_certificate.values.to_name}}">
+                        <input type="text" class="form-input" name="to_name" placeholder="{{lang 'common.required_symbol'}}" id="to_name" value="{{forms.gift_certificate.values.to_name}}">
                     </div>
                     <div class="form-field">
                         <label class="form-label" for="to_email">
                             {{lang 'forms.gift_certificate.purchase.to_email' }}
-                            <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
+                            <small class="_required" title="{{lang 'common.required'}}"></small>
                         </label>
-                        <input type="text" class="form-input" name="to_email" id="to_email" value="{{forms.gift_certificate.values.to_email}}">
+                        <input type="text" class="form-input" name="to_email" placeholder="{{lang 'common.required_symbol'}}" id="to_email" value="{{forms.gift_certificate.values.to_email}}">
                     </div>
                 </div>
                 <div class="form-row">
@@ -65,8 +65,8 @@
                         {{#if forms.gift_certificate.can_use_custom_amount }}
                             <div class="form-field">
                                 <label class="form-label" for="certificate_amount">
-                                    {{lang 'forms.gift_certificate.purchase.amount' }}
-                                    <small class="_required" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
+                                   
+                                    <small class="_required" placeholder=" {{lang 'forms.gift_certificate.purchase.amount' }}" title="{{lang 'common.required'}}">{{lang 'common.required_symbol'}}</small>
                                 </label>
                                 <input type="text" data-min="{{forms.gift_certificate.minimum.value}}" data-max="{{forms.gift_certificate.maximum.value}}" data-min-formatted="{{forms.gift_certificate.minimum.formatted}}" data-max-formatted="{{forms.gift_certificate.maximum.formatted}}" class="form-input" name="certificate_amount" id="certificate_amount" value="{{forms.gift_certificate.values.amount.value}}">
                             </div>
