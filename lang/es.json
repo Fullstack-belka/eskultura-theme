@@ -274,7 +274,7 @@
         }
     },
     "create_account": {
-        "heading": "Cuenta Nueva",
+        "heading": "Regístrate",
         "created": {
             "heading": "Cuenta creada exitosamente!",
             "intro": "Gracias por crear un cuenta en {store_name}. Los detalles de tu cuenta han sido envíados a <strong>{email}</strong>",
@@ -426,7 +426,7 @@
               "state_province": "State/Province",
               "choose_state": "Choose a State",
               "country": "Country",
-              "choose_country": "Choose a Country",
+              "choose_country": "Seleccionar ciudad",
               "zip_postcode": "Zip/Postcode"
             }
         },
@@ -593,7 +593,7 @@
             "country": "Country",
             "state": "State/Province",
             "postal_code": "Zip/Postcode",
-            "choose_country": "Choose a Country",
+            "choose_country": "Seleccionar ciudad",
             "default_instrument": "Default Payment Method"
         },
         "gift_certificate": {
@@ -722,7 +722,8 @@
         "min_purchase_quantity": "Minimum Purchase:",
         "related_products": "Related Products",
         "top": "Popular Products",
-        "similar_by_views": "Customers Also Viewed",
+        "similar_by_views": "Y por tu buen gusto",
+        "similar_by_views_lead": "Te recomendamos estas opciones ideales para ti",
         "featured": "Featured Products",
         "file_option_set": "Currently: <a href=\"{url}\" target=\"_blank\">{name}</a>",
         "new": "New Products",
@@ -778,21 +779,21 @@
         "sold_out": "Sold Out",
         "instock": "In Stock",
         "pre_order": "Pre-Order",
-        "choose_options": "Options",
-        "quick_view": "Quick view",
-        "compare": "Compare",
+        "choose_options": "Opciones",
+        "quick_view": "Ver",
+        "compare": "Comparar",
         "max_filesize": "Maximum file size is",
         "filetypes": "file types are",
         "choose_an_option": "Please choose an option",
-        "select_one": "Please select one",
+        "select_one": "Por favor seleccione uno",
         "description": "Descripción del Producto",
         "price_with_tax": "Inc. {tax_label}",
         "price_without_tax": "Ex. {tax_label}",
         "including_tax": "Including Tax",
         "excluding_tax": "Excluding Tax",
-        "weight": "Weight:",
-        "width": "Width:",
-        "height": "Height:",
+        "weight": "Peso:",
+        "width": "Ancho:",
+        "height": "Largo:",
         "depth": "Depth:",
         "measurement": {
             "metric": "cm",
@@ -801,7 +802,7 @@
         "you_save_opening_text": "Ahorras",
         "you_save_closing_bracket": " ",
         "gift_wrapping": "Gift wrapping:",
-        "gift_wrapping_available": "Options available",
+        "gift_wrapping_available": "Opciones Disponibles",
         "quantity_min": "The minimum purchasable quantity is {quantity}",
         "quantity_max": "The maximum purchasable quantity is {quantity}",
         "bulk_pricing": {
