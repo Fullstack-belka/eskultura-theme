@@ -729,10 +729,11 @@
         "warranty": "Warranty",
         "addition": "Additional Information",
         "reviews": {
-            "hide": "Hide Reviews",
+            "hide": "Ocultar Reviews",
             "new": "Escribe una reseña",
-            "show": "Show Reviews",
-            "title": "Product Reviews",
+            "recommend": "Personas opinaron sobre el producto",
+            "show": "Mostrar Reviews",
+            "title": "Calificaciones y opiniones",
             "header": "{total, plural, =0{0 Reviews} one {# Review} other {# Reviews}}",
             "link_to_review": "{total, plural, =0{No reviews yet} one {# review} other {# reviews}}",
             "post_on_by": "Posted by <span itemprop=\"name\">{ name }</span> on { date }",
@@ -740,19 +741,19 @@
             "select_rating": "Select Rating",
             "anonymous_poster": "Unknown",
             "rating": {
-                "1": "1 star (worst)",
-                "2": "2 stars",
-                "3": "3 stars (average)",
-                "4": "4 stars",
-                "5": "5 stars (best)"
+                "1": "1 estrella (Bajo)",
+                "2": "2 estrella",
+                "3": "3 estrella (Medio)",
+                "4": "4 estrella",
+                "5": "5 estrella (Muy recomendado!)"
             },
             "write_a_review": "Escribe una reseña",
             "form_write": {
-                "name": "Name",
+                "name": "Nombre",
                 "email": "Email",
-                "subject": "Review Subject",
-                "comments": "Comments",
-                "submit_value": "Submit Review"
+                "subject": "Titulo",
+                "comments": "Comentario",
+                "submit_value": "Enviar tu reseña"
             }
         },
         "videos": {
@@ -833,13 +834,13 @@
     },
     "newsletter": {
         "subscribe": "Newsletter",
-        "subscribe_submit": "Subscribe",
+        "subscribe_submit": "Enviar",
         "email_placeholder": "Ingresa tu correo",
-        "subscribed_heading": "Thanks for Subscribing!",
+        "subscribed_heading": "Gracias por suscribirte!",
         "subscribed_heading_error": "Oops...",
-        "subscribed_message": "Thank you for joining our mailing list. You'll be sent the next issue of our newsletter shortly",
+        "subscribed_message": "Gracias por unirte a nuestro Newsletter",
         "unsubscribed_heading": "Unsubscribed!",
-        "unsubscribed_message": "You will no longer receive marketing emails from <b>{store_name}</b>",
+        "unsubscribed_message": "Ya no recibiras correos electrónicos. <b>{store_name}</b>",
         "hide_popup_msg": "Don't show this popup again"
     },
     "social": {
@@ -861,12 +862,12 @@
             "clear_all": "Clear All"
         },
         "results": {
-            "form_label": "Search Keyword:",
-            "form_button_text": "Search",
+            "form_label": "Búsqueda:",
+            "form_button_text": "Buscar",
             "count": "{ count, plural, one {# result} other {# results} } for '{ search_query }'",
             "quick_count": "{ count, plural, one {# product result} other {# product results} } for '{ search_query }'",
-            "product_count": "Products ({count})",
-            "content_count": "News & Information ({count})"
+            "product_count": "Productos ({count})",
+            "content_count": "Nuevos e información ({count})"
         },
         "faceted": {
             "selected": {
