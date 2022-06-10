@@ -251,6 +251,39 @@
     }
 }
 
+
 .blog {
     line-height: 1.8;
+}
+.page-blog{
+    .blog{
+        display: flex;
+        flex-wrap: wrap;
+        .blog-thumbnail{margin: 0;}
+        .blog-post-figure{width: 100%;}
+        .blog-post-body{ 
+            width: 100%;
+            padding: 20px 35px;
+            .blog-summary{text-align: center;}
+            .blog-dateContainer{justify-content: center;}
+            .blog-date{text-align: center; color: #E7BDFE;}
+            h2{color : stencilColor("color-primary"); font-size: 1.4rem; text-align: center;}
+        }   
+        
+
+
+        @include breakpoint("medium") {
+            .blog-post-figure{width: 50%;}
+            .blog-post-body{  width: 50%;}
+
+            .blog:nth-child(2n){
+                .blog-post-figure{order: 2;}
+                .blog-post-body{order: 1;}
+            }
+        }
+    }
+
+}
+.page-blog_post{
+    .blog-heading{font-size: 2rem; color:  stencilColor("color-primary"); text-align: left; text-transform: uppercase;}
 }

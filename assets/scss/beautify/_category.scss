@@ -178,7 +178,7 @@
 
     &.is-selected {
         &::before {
-            background-color: $color-textBase;
+            background-color: stencilColor("color-primary");
         }
         &::after {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z' fill='white' /%3E%3C/svg%3E");
@@ -210,8 +210,7 @@
         text-decoration: none;
     }
 
-    ._accordion-block {
-        border-top: container("border");
+    ._accordion-block {        
         padding-top: spacing("single");
     }
 
@@ -286,8 +285,12 @@
 }
 
 .facetedSearch-refineFilters {
+
+    .facetedSearch-clearLink {
+        margin: 0;
+    }
     margin-bottom: spacing("single");
-    border-top: container("border");
+    
     padding-top: spacing("single");
 }
 
@@ -297,6 +300,7 @@
 
 .facetedSearch-clearLink {
     color: inherit;
+    margin-left: 10px;
 
     .facetedSearch & {
         text-decoration: underline;
@@ -304,7 +308,7 @@
 
     &:hover,
     &:focus {
-        color: $color-textBase-hover;
+        color: stencilColor("color-primary");
     }
     ~ .icon {
         margin-left: spacing("half");
@@ -417,8 +421,8 @@
             .form-radio:checked + .form-option {
                 box-shadow: none;
                 color: $color-secondary;
-                background-color: $color-textBase;
-                border-color: $color-textBase;
+                background-color: stencilColor("color-primary");
+                border-color:stencilColor("color-primary");
             }
         }
         ._filters-toggle {
@@ -594,11 +598,16 @@
 
     .form-field {
         border-radius: $input-border-radius;
+        border: 0;
     }
 
     .form-input {
+        ::placeholder{color: black;}
         height: spacing("single") + spacing("base") - remCalc(2px);
         padding-top: spacing("third");
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid gray;
         padding-bottom: spacing("third");
         &::placeholder {
             font-size: fontSize("smaller");
@@ -733,7 +742,7 @@
     &._hasSearchInCategory {
         .papathemes-productsFilter {
             @include breakpoint("medium") {
-                background-color: container("fill", "dark");
+                
                 padding: spacing("third");
                 margin-bottom: spacing("half");
                 .actionBar {

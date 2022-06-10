@@ -9,11 +9,32 @@
             {{category.name}}
             <svg class="icon"><use xlink:href="#icon-keyboard-arrow-down"></use></svg>
         </h3>
-        <ul id="categories-navList" class="beautify__navList is-open" aria-hidden="false">
+        <ul id="categories-navList" class="beautify__navList categoryPage_mainImage-slider is-open" aria-hidden="false">
             {{#each category.subcategories}}
-            <li class="navList-item">
-                <a class="navList-action" data-instantload href="{{url}}" title="{{name}}">{{name}}</a>
-            </li>
+            {{#if theme_settings.show_category_image category.image}}
+                {{#if image}}
+
+                <li class="navList-item">
+                    <a class="navList-action" data-instantload href="{{url}}" title="{{name}}">                                
+                        <img alt="{{category.name}}" title="{{category.name}}"
+                            {{#if theme_settings.lazyload_mode '===' 'disabled'}}
+                                src="{{getImage category.image 'original'}}"
+                            {{else}}
+                                {{#if theme_settings.lazyload_mode '===' 'lazyload+lqip'}}
+                                    src="{{getImageSrcset image 1x='80w'}}"
+                                {{else}}
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                {{/if}}
+                                data-src="{{getImage image 'category_size'}}" class="lazyload"
+                            {{/if}}
+                        />                
+                    </a>
+                </li>
+
+                {{/if}}
+            {{/if}}
+
+
             {{/each}}
         </ul>
     </div>

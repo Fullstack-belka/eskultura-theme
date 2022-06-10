@@ -2,15 +2,20 @@
     <ul class="navPages-list">
         {{#if theme_settings.navPages_type '==' 'standard'}}
             {{#each categories}}
+
                 <li class="navPages-item navPages-item--id-{{id}} navPages-item--standard">
                     {{> components/beautify/navigation-list theme_settings=../theme_settings menu_type='standard'}}
                 </li>
+
             {{/each}}
         {{else if theme_settings.navPages_type '==' 'column'}}
             {{#each categories}}
+                {{# if id '==' 34 or id '==' 33 }}
+                {{else}}
                 <li class="navPages-item navPages-item--id-{{id}} navPages-item--column">
                     {{> components/beautify/navigation-list theme_settings=../theme_settings menu_type='column'}}
                 </li>
+                {{/if}}
             {{/each}}
         {{else}}
             {{#each categories}}

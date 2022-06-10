@@ -123,12 +123,21 @@
                 <div class="_account">
                     {{#if customer}}
                         <a href="{{urls.account.index}}" class="navUser-action navUser-action--login">
-                            <span class="_label">{{lang 'common.account'}}</span>
-                            <svg class="icon"><use xlink:href="#icon-account" /></svg>
+                            <span class="_label">{{lang 'common.account'}}</span>                            
+                            <svg  class="icon" xmlns="http://www.w3.org/2000/svg" width="33.725" height="33.725" viewBox="0 0 33.725 33.725">
+                                <g id="User_off" data-name="User off" transform="translate(0.5 0.5)">
+                                  <path id="Icon_awesome-user-circle" data-name="Icon awesome-user-circle" d="M16.363.563A16.363,16.363,0,1,0,32.725,16.925,16.36,16.36,0,0,0,16.363.563Zm0,6.334A5.806,5.806,0,1,1,10.557,12.7,5.806,5.806,0,0,1,16.363,6.9Zm0,22.7a12.643,12.643,0,0,1-9.666-4.5,7.356,7.356,0,0,1,6.5-3.946,1.614,1.614,0,0,1,.468.073,8.736,8.736,0,0,0,2.7.455,8.7,8.7,0,0,0,2.7-.455,1.614,1.614,0,0,1,.468-.073,7.356,7.356,0,0,1,6.5,3.946A12.643,12.643,0,0,1,16.363,29.593Z" transform="translate(0 -0.563)" fill="none" stroke="#5e408e" stroke-width="1"/>
+                                </g>
+                            </svg>
+                              
                         </a>
                     {{else}}
                         <a href="{{urls.auth.login}}" class="navUser-action navUser-action--login">                     
-                            <svg class="icon"><use xlink:href="#icon-account" /></svg>
+                            <svg  class="icon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33.725 33.725">
+                                <g id="User_off" data-name="User off" transform="translate(0.5 0.5)">
+                                  <path id="Icon_awesome-user-circle" data-name="Icon awesome-user-circle" d="M16.363.563A16.363,16.363,0,1,0,32.725,16.925,16.36,16.36,0,0,0,16.363.563Zm0,6.334A5.806,5.806,0,1,1,10.557,12.7,5.806,5.806,0,0,1,16.363,6.9Zm0,22.7a12.643,12.643,0,0,1-9.666-4.5,7.356,7.356,0,0,1,6.5-3.946,1.614,1.614,0,0,1,.468.073,8.736,8.736,0,0,0,2.7.455,8.7,8.7,0,0,0,2.7-.455,1.614,1.614,0,0,1,.468-.073,7.356,7.356,0,0,1,6.5,3.946A12.643,12.643,0,0,1,16.363,29.593Z" transform="translate(0 -0.563)" fill="none" stroke="#5e408e" stroke-width="1"/>
+                                </g>
+                            </svg>
                         </a>
                     {{/if}}
                 </div>
@@ -139,7 +148,13 @@
                         data-toggle="cart-preview-dropdown"
                         href="{{urls.cart}}"
                         title="{{lang 'common.cart'}}">
-                        <svg class="icon"><use xlink:href="#icon-cart" /></svg>
+
+                        <svg class="icon" id="Bag_A" data-name="Bag A" xmlns="http://www.w3.org/2000/svg" width="32.73" height="32.73" viewBox="0 0 32.73 32.73">
+                            <rect id="Rectángulo_418" data-name="Rectángulo 418" width="32.73" height="32.73" fill="none"/>
+                            <path id="Icon_awesome-shopping-bag" data-name="Icon awesome-shopping-bag" d="M21.909,9.914V7.931a7.967,7.967,0,0,0-15.934,0V9.914H0V26.768a4.968,4.968,0,0,0,4.979,4.957H22.905a4.968,4.968,0,0,0,4.979-4.957V9.914ZM9.959,7.931a3.984,3.984,0,0,1,7.967,0V9.914H9.959Zm9.959,7.436a1.487,1.487,0,1,1,1.494-1.487A1.49,1.49,0,0,1,19.918,15.367Zm-11.951,0A1.487,1.487,0,1,1,9.461,13.88,1.49,1.49,0,0,1,7.967,15.367Z" transform="translate(2.5 0.5)" fill="none" stroke="#5e408e" stroke-width="1"/>
+                        </svg>
+                          
+                          
                         <span class="_label">{{lang 'common.cart'}}</span> <span class="countPill cart-quantity"></span>
                     </a>
                     <div class="previewCart-overlay"></div>
@@ -152,7 +167,7 @@
     </div>
 
     <div class="navPages-container" id="menu" data-menu>
-        <div class="container holatest" id="bf-fix-menu-mobile">
+        <div class="container" id="bf-fix-menu-mobile">
             {{> components/beautify/navigation-menu}}
 
             <div class="beautify__belowMobileMenu">

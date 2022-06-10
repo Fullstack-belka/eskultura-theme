@@ -1,6 +1,6 @@
 <div class="_accordion-block">
     <div
-        class="_accordion-navigation toggleLink {{#unless ../start_collapsed }} is-open {{/unless}}"
+        class="_accordion-navigation toggleLink "
         role="button"
         tabindex="0"
         data-collapsible="#facetedSearch-content--{{dashcase facet }}">
@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div id="facetedSearch-content--{{dashcase facet }}" class="_accordion-content {{#unless ../start_collapsed }} is-open {{/unless}}">
+    <div id="facetedSearch-content--{{dashcase facet }}" class="_accordion-content">
         <div class="beautify__shopByPrice-slider" data-slider></div>
         <form id="facet-range-form" class="form" method="get" data-faceted-search-range novalidate>
             <input type="hidden" name="search_query" value="{{search_query}}">

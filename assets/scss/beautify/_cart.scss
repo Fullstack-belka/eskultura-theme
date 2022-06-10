@@ -422,6 +422,7 @@ div.previewCart-additionalCheckoutButtons {
             background: $color-primary;
             color: $color-secondary;
             ._heading {
+                text-align: center;
                 margin: 0 45px 0 0;
                 color: inherit;
                 font-size: fontSize("larger");
@@ -505,6 +506,7 @@ div.previewCart-additionalCheckoutButtons {
 
 .previewCartAction {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -519,6 +521,8 @@ div.previewCart-additionalCheckoutButtons {
 }
 
 .previewCartAction-totals {
+    width: 100%;
+    margin-bottom: 5px;
     padding-right: spacing("half");
     .cart-total {
         padding: 0;
@@ -595,4 +599,8 @@ div.previewCart-additionalCheckoutButtons {
 .previewCartItem-price {
     font-size: inherit;
     color: inherit;
+}
+.previewCartAction{
+    padding: 0;
+    padding-top: 15px;
 }

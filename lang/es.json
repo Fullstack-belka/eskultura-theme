@@ -77,7 +77,7 @@
             "view_cart": "Ver Carrito",
             "edit_cart": "Editar Carrito"
         },
-        "label": "Tú carrito ({quantity, plural, one {# item} other {# items}})",
+        "label": "CARRITO DE COMPRAS ({quantity, plural, one {# } other {# }})",
         "is_empty": "Tú carrito está vacío",
         "coupon_code": "Cupón de descuento",
         "discount": "Descuento",
@@ -554,13 +554,13 @@
             "successful": "We've received your feedback and will respond shortly if required. <a href=\"{shopPath}\">Continue</a>."
         },
         "create_account": {
-            "submit_value": "Create Account"
+            "submit_value": "Crear Cuenta"
         },
         "new_password": {
-            "heading": "Change Password",
-            "password": "New Password",
-            "password2": "Confirm Password",
-            "submit_value": "Continue"
+            "heading": "Cambiar contraseña",
+            "password": "Nueva contraseña",
+            "password2": "Confirmar contraseña",
+            "submit_value": "Continuar"
         },
         "address": {
             "add": {
@@ -651,10 +651,10 @@
             "your_search_for": "Your search for",
             "no_match": "did not match any products or information.",
             "suggestions": {
-                "title": "Suggestions:",
+                "title": "Sugerencias:",
                 "line1": "Make sure all words are spelled correctly.",
-                "line2": "Try different keywords.",
-                "line3": "Try more general keywords."
+                "line2": "Intenta diferentes palabras",
+                "line3": "Busca palabras más generales"
             },
             "refine": "Refine Search",
             "brand": "Brands",
@@ -736,7 +736,7 @@
             "show": "Mostrar Reviews",
             "title": "Calificaciones y opiniones",
             "header": "{total, plural, =0{0 Reviews} one {# Review} other {# Reviews}}",
-            "link_to_review": "{total, plural, =0{No reviews yet} one {# review} other {# reviews}}",
+            "link_to_review": "{total, plural, =0{Sin reviews} one {# review} other {# reviews}}",
             "post_on_by": "Posted by <span itemprop=\"name\">{ name }</span> on { date }",
             "rating_label": "Rating",
             "select_rating": "Select Rating",
@@ -776,8 +776,8 @@
         "shipping_fixed": "{amount} (Fixed Shipping Cost)",
         "shipping_free": "Free Shipping",
         "shipping_calculated": "Calculated at Checkout",
-        "sold_out": "Sold Out",
-        "instock": "In Stock",
+        "sold_out": "Vendido",
+        "instock": "En Stock",
         "pre_order": "Pre-Order",
         "choose_options": "Opciones",
         "quick_view": "Ver",
@@ -860,7 +860,7 @@
         "actionbar": {
             "input_label": "Search",
             "input_placeholder": "Filter products by name, SKU, attributes...",
-            "clear_all": "Clear All"
+            "clear_all": "Borrar"
         },
         "results": {
             "form_label": "Búsqueda:",
@@ -872,10 +872,10 @@
         },
         "faceted": {
             "selected": {
-                "title": "Refine by",
-                "rating-label": "Rated {rating, plural, one {# Star} other {# Stars}} Or More",
+                "title": "Filtrar por",
+                "rating-label": "Reviews {rating, plural, one {# Star} other {# Stars}} Or More",
                 "no-filters": "No filters applied",
-                "clear-all": "Clear all"
+                "clear-all": "Borrar"
             },
             "range": {
                 "update": "Update",
@@ -885,12 +885,12 @@
             "rating": {
                 "and-up": "& up"
             },
-            "clear": "Clear",
-            "more": "More",
-            "show-more": "Show More",
+            "clear": "Borrar",
+            "more": "Más",
+            "show-more": "Ver más",
             "show-less": "Show Less",
-            "show-filters": "Show Filters",
-            "hide-filters": "Hide Filters",
+            "show-filters": "Mostrar filtros",
+            "hide-filters": "Ocultar filtros",
             "filters": "Filters",
             "apply_filters": "Apply Filters",
             "filter_by": "Filter By",

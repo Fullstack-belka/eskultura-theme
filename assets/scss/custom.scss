@@ -15,14 +15,22 @@
     a.powered-link {
     display: none!important;
 }
-h1.page-heading {text-align: center;width: 100%;padding: 7px;font-size: 5rem;text-transform: uppercase; letter-spacing: 5px;}
+h1.page-heading {text-align: center;width: 100%;padding: 7px;font-size: 5rem;text-transform: uppercase; letter-spacing: 5px;
+
+    @media (max-width: screenSize("medium") - 1px) {
+
+        font-size: 3rem;
+    }
+    @media (max-width: screenSize("small") - 1px) {
+
+        font-size: 1.6rem;
+    }
+}
 
 main#product-listing-container {
     margin-left: 10%;
 }
-input#search_query {
-    margin-top: 19px;
-}
+
 
 
 .category-list .container-header a{
@@ -71,22 +79,30 @@ a.navPages-action:hover{
 .beautify__mainHeader._hasImg._left {
     background: #F9F5FF;
 }
-input#search_query {
-    border-radius: 50px;
-}
+
 ._account{
+    a:hover{
+        path{fill: stencilColor("color-primary");}
+    }
     order: 4;
     padding: 10px;
+    @media (max-width: screenSize("medium") - 1px) {
+        order: 1;
+    }
 }
 ._cart{
+    a:hover{
+        path{fill: stencilColor("color-primary");}
+    }
     order: 5;
     position: relative;
+    @media (max-width: screenSize("medium") - 1px) {
+        order: 2;
+    }
 }
-input#search_query {
-    margin-bottom: 14px;
-}
-button.button._submit {
-    display: none;
+
+.card-title > a:hover{
+    color :  stencilColor("color-primary");
 }
 
 ._searchBar {
@@ -98,7 +114,7 @@ button.button._submit {
 .go2405723030:hover,.go3482607567:hover ,.go4164626276:hover,.go521600597:hover,.go28724445:hover,.go1289053998:hover,.go2347030846:hover,.go297012889:hover,.go3447205794:hover,.go690130627:hover {
     transition: .4s all;
     background: rgba(97,69,142,0.5);
-    transform: scale(1.5);
+    transform: scale(1.1);
     color: white;;
 }
 
@@ -144,11 +160,22 @@ span._label {display: none;}
 .navPages-list{text-align: center;}
 
 .beautify__quickSearch .button._submit,
-.beautify__quickSearch .button._close{width: 16px; height: 16px; background: transparent;padding: 0;left: 14px;position: absolute;top: calc(50% - 9px);}
+.beautify__quickSearch .button._close{background: transparent;padding: 0;left: 14px;position: absolute;top: calc(50% - 9px);}
 .beautify__quickSearch .button._close{left: unset; right: 14px;}
 
-.beautify__quickSearch .button._submit .icon{fill: stencilColor("quickSearch-color"); }
-.beautify__quickSearch .form-input{padding-left: 45px; border-radius: 50px;}
+.beautify__quickSearch .form-input{
+    border-radius: 50px;
+    margin-top: 19px;
+    margin-bottom: 14px;
+    padding-left: 45px; border-radius: 50px;
+    @media (max-width: screenSize("medium") - 1px) {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+}
 div#bf-fix-menu-mobile{background: #5E408F;color: white; border: 0;}
 a.navPages-action {color: white;}
 a.navPages-action:hover{color: #E7BDFE;}
@@ -157,6 +184,8 @@ a.navPages-action:hover{color: #E7BDFE;}
     .navUser-action{margin: 0;}
 }
 
+
+.card-figcaption-button:hover{background-color: stencilColor("color-primary");}
 .footer .container{width: 100%;max-width: 1200px;margin: auto;padding: 35px 0px; color: #54387F;  display: flex; justify-content: center; flex-wrap: wrap;}
 .footer .container .box{position: relative;  padding: 0 30px; width: 20%;}
 
@@ -212,8 +241,8 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .productView-link-container .productView-link{text-decoration: unset; display: flex; align-items: center;}
 .productView-link-container .productView-link:hover{font-weight: normal;}
 .productView-link-container .productView-link.link-envios{font-weight: 700; text-transform: uppercase;letter-spacing: 1px;}
-.productView-link-container .ico-tallas-product{content: ''; width: 36px; height: 24px; background: url('../img/ico/ico_tallas_product.png') no-repeat center / 100%; margin-right: 10px;}
-.productView-link-container .ico-envios-product{content: ''; width: 36px; height: 24px; background: url('../img/ico/ico_conoce_envio.png') no-repeat center / 100%; margin-right: 10px;}
+.productView-link-container .ico-tallas-product{content: ''; width: 24px; height: 24px; background: url('../img/ico/ico_tallas_product.png') no-repeat center / 100%; margin-right: 10px;}
+.productView-link-container .ico-envios-product{content: ''; width: 24px; height: 24px; background: url('../img/ico/ico_conoce_envio.png') no-repeat center / 100%; margin-right: 10px;}
 
 .productView-description .tabs .tab{margin: 0;}
 .productView-description .tabs .tab .tab-title{border-right: 1px solid $color-primary; padding: 10px 20px;}
@@ -293,25 +322,30 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 
 
 // vista categoria prodcuto
-div#facetedSearch {display: flex; flex-wrap: wrap; }
+div#facetedSearch {display: flex; flex-wrap: wrap;}
 .page-sidebar {width: 100%;}
 div#facetedSearch {display: flex; flex-wrap: wrap; }
 ._accordion._accordion--navList {display: flex;flex-wrap: wrap;}
 .page-sidebar + .page-content {width: 100%;}
-.facetedSearch-refineFilters.sidebarBlock { margin-right: 20px;}
-._accordion-navigation.toggleLink.is-open { padding-left: 10px;}
+.facetedSearch-refineFilters.sidebarBlock { margin-right: 20px; max-width: 350px; width: 100%;}
+._accordion-navigation.toggleLink{ padding-left: 10px;padding: 0 10px;}
 h3.sidebarBlock-heading {color: #54387F; font-size: 0.5rem;}
 h4._accordion-title{color:#54387F; font-size: 0.5rem;}
 svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--on{border-right:solid 0.1rem #54387F; padding-right: 10px;}
 svg.icon._accordion-indicator.toggleLink-text.toggleLink-text--off{border-right:solid 0.1rem #54387F; padding-right: 10px;}
-.facetedSearch ._accordion-content.is-open {position: absolute; z-index: 3; background: white; padding: 3px;}
+.facetedSearch ._accordion-content {position: absolute; z-index: 3; background: white; padding: 10px 15px;}
 ._accordion-block{position:relative}
-._accordion-navigation.toggleLink.is-open {min-width: 140px;}
 input.form-input.form-input--small {max-width:150px;}
 a.navList-action.navList-action--checkbox {min-width: 130px;}
 .form-field.form-field--input {min-width: 120px;}
-button.button.button--outline.button--small {background: white; }
+button.button.button--outline.button--small {background: white;  padding: 10px 15px;}
 button.button.button--outline.button--small:hover {background: #A50CFD; color:white }
+
+.categoryPage_mainImage-slider{
+
+    .slick-slide{padding:0 10px;}
+    img{height: 170px; object-fit: cover; object-position: center;}
+}
 
 // somos eskultura
 div#sd-image-c77675ad-824c-4fad-94fb-9e264c45efe3:hover{background: url(https://cdn11.bigcommerce.com/s-7srliiv4l2/product_images/uploaded_images/mision-b.jpg?t=1648741249&_gl=1*11q8f8t*_ga*MTM2MzQ5MTQ1NS4xNjM5NTk2ODcz*_ga_WS2VZYPC6G*MTY0ODc0NzQ4My4xMzcuMS4xNjQ4NzQ4MzI3LjM5);}
@@ -328,8 +362,10 @@ label.form-label {display: none;}
 .login-form.form input::not([type="submit"]){background: #C5B9E7;}
 
 //pagina de escribenos
-.mapa-tienda{ height: 400px; width: 100%;}
-.form-input{background: #FAF1FF; color: #54387F!important;}
+.page-page_contact_form{
+    .mapa-tienda{ height: 400px; width: 100%;}
+    .form-input{background: #FAF1FF; color: #54387F!important;}
+}
 
 
 //home color categorias

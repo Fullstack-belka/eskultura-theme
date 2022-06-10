@@ -296,7 +296,7 @@
             &:focus,
             &:hover,
             &:active {
-                background-color: stencilColor("button--white-backgroundColorHover");
+                background-color:  stencilColor("color-primary");
                 color: stencilColor("button--white-colorHover");
                 border-color: stencilColor("button--white-backgroundColorHover");
                 .icon {
@@ -354,7 +354,8 @@
 }
 
 .card-image {
-    border-radius: 10px;
+    border-radius: 0;
+    object-fit: cover;
 }
 
 .card-text--rating {

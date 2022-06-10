@@ -9,6 +9,9 @@
                 </a>
             </figure>
         {{/if}}
+        {{#if single}}
+        <h1 class="blog-heading">{{ blog.post.title }}</h1>
+        {{/if}}
     </div>
 
     <div class="blog-post-body">
@@ -17,6 +20,7 @@
                 <h2 class="blog-title">
                     <a data-instantload href="{{post.url}}">{{post.title}}</a>
                 </h2>
+                <div class="blog-date"><span class="blog-date-date">{{post.date_published}}{{#if post.author}}</span> <span class="blog-date-author">{{lang 'blog.posted_by' name=post.author}}{{/if}}</span></div>
             {{/unless}}
         </header>
 
@@ -40,7 +44,7 @@
                         <div class="blog-readmore"><a data-instantload href="{{url}}">{{lang 'blog.read_more'}}</a></div>
                     {{/if}}
                     {{/unless}}
-                    <div class="blog-date"><span class="blog-date-date">{{post.date_published}}{{#if post.author}}</span> <span class="blog-date-author">{{lang 'blog.posted_by' name=post.author}}{{/if}}</span></div>
+                    
                 </div>
             {{/if}}
         </div>

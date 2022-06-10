@@ -460,5 +460,20 @@ export default function (context) {
         });
     });
 
+
+    $( document ).ready(function() {
+        $('#categories-navList').slick({
+            infinite: true,
+            slidesToShow: 2,
+            lazyLoad: 'ondemand',
+            dots: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            slidesToScroll: 1
+        });                  
+    });
+
+ 
+
     inhealth();
 }
