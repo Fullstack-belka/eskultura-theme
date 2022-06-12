@@ -327,7 +327,7 @@ div#facetedSearch {display: flex; flex-wrap: wrap;}
 div#facetedSearch {display: flex; flex-wrap: wrap; }
 ._accordion._accordion--navList {display: flex;flex-wrap: wrap;}
 .page-sidebar + .page-content {width: 100%;}
-.facetedSearch-refineFilters.sidebarBlock { margin-right: 20px; max-width: 350px; width: 100%;}
+.facetedSearch-refineFilters.sidebarBlock { margin-right: 20px; max-width: 350px;}
 ._accordion-navigation.toggleLink{ padding-left: 10px;padding: 0 10px;}
 h3.sidebarBlock-heading {color: #54387F; font-size: 0.5rem;}
 h4._accordion-title{color:#54387F; font-size: 0.5rem;}
@@ -343,7 +343,7 @@ button.button.button--outline.button--small:hover {background: #A50CFD; color:wh
 
 .categoryPage_mainImage-slider{
 
-    .slick-slide{padding:0 10px;}
+    .slick-slide{margin: 0 10px;}
     img{height: 170px; object-fit: cover; object-position: center;}
 }
 
