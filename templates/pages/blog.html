@@ -17,9 +17,11 @@ customer:
 
 <div class="page u-papathemes-page-responsiveSidebar">
     <main class="page-content">
-        <div class="page-content-header">
-            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-            <h1 class="page-heading">{{ blog.name }}</h1>
+        <div class="container">
+            <div class="page-content-header">
+                {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+                <h1 class="page-heading">{{ blog.name }}</h1>
+            </div>
         </div>
         <div class="page-content-body">
             {{{region name="blog_content--global"}}}

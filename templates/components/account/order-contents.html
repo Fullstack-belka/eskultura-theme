@@ -50,6 +50,12 @@
                 {{#if brand}}
                     <h4>{{brand.name}}</h4>
                 {{/if}}
+                {{#if sku}}
+                <dl class="definitionList">
+                    <dt class="definitionList-key">Ref:</dt>
+                    <dd class="definitionList-value">{{{sku}}}</dd>
+                </dl>
+                {{/if}}
                 {{#if options}}
                 <dl class="definitionList">
                     {{#each options}}

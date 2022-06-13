@@ -473,7 +473,9 @@ export default function (context) {
         });                  
     });
 
- 
+    $('.productView-details .button--toggle').click( function(){
+        $('.productView-description-tabContent').toggle(300);
+    });    
 
     inhealth();
 }

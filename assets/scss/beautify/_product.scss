@@ -53,7 +53,7 @@
         }
     }
     &._border {
-        box-shadow: 0 1px 2px rgba(color("blacks"), 0.1);
+        
         background-color: container("fill");
         border: container("border");
         margin: spacing("eighth");
@@ -91,7 +91,7 @@
             minmax(beautify__fontSize(13) * 1.5 + $card-text-marginBottom, max-content) // brand
             minmax(min-content, max-content) // swatches
             minmax(2rem, max-content) // price
-            minmax(remCalc(12) * 1.5 + $card-text-marginBottom, max-content); // rating
+            ; // rating
         .card-text--brand {
             grid-row: 2;
         }
@@ -115,7 +115,7 @@
             minmax(beautify__fontSize(13) * 1.5 + $card-text-marginBottom, max-content) // brand
             minmax(min-content, max-content) // swatches
             minmax(2rem, max-content) // price
-            minmax(remCalc(12) * 1.5 + $card-text-marginBottom, max-content); // rating
+            ; // rating
         .card-badges {
             grid-row: 1;
         }
@@ -1095,7 +1095,10 @@
     }
 
     .price--main {
-        font-size: beautify__fontSize(60);
+        font-size: beautify__fontSize(20);
+        @include breakpoint("medium") {
+            font-size: beautify__fontSize(45);
+        }
         color: #A50CFD;
     }
 
@@ -1203,7 +1206,11 @@
             + .button {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
+                .icon{fill: stencilColor('color-primary');}
                 padding: 0;
+                &:hover{
+                    .icon{fill: white;}
+                }
                 &:disabled {
                     border: 1px solid rgba($buttonStyle-primary-borderColor, .5);
                 }
@@ -1672,7 +1679,7 @@
             width: calc(100% - 30px);
         }
         &.slick-dotted.slick-slider {
-            margin-bottom: spacing("double");
+            margin-bottom: 0;
         }
         .slick-list {
             width: calc(100% - 30px);

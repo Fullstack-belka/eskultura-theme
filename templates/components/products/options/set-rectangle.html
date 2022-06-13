@@ -1,4 +1,4 @@
-<div class="form-field" data-product-attribute="set-rectangle">
+<div class="form-field" data-product-attribute="set-rectangle" data-name-atribute="{{this.display_name}}">
     <label class="form-label form-label--alternate form-label--inlineSmall">
         {{this.display_name}}:
         <span data-option-value></span>
@@ -25,9 +25,9 @@
             <span class="form-option-variant">{{this.label}}</span>
         </label>
     {{/each}}
-    {{#if this.display_name  '==' 'Tallas Disponibles'}}
-        <div class="productView-link-tallas">
-            <a class="linkTallas" target="_blank" href="/content/_blank.pdf">Guía de tallas</a>
+    {{#if this.display_name  '==' 'Size'}}
+        <div class="productView-link-container">
+            <a class="linkTallas" target="_blank" href="/content/_blank.pdf"><span class="ico-tallas-product"></span> Guía de tallas</a>
         </div>
     {{/if}}
 </div>

@@ -52,9 +52,9 @@
             <a href="{{url}}" data-instantload {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}>{{name}}</a>
         </h3>
 
-        <div class="card-text card-text--brand" data-test-info-type="brandName">
-            {{#if brand}}
-                {{brand.name}}
+        <div class="card-text card-text--reference" data-test-info-type="Reference">
+            {{#if sku}}
+                Ref: {{sku}}
             {{/if}}
         </div>
 
@@ -82,12 +82,13 @@
                 {{> components/common/login-for-pricing}}
             {{/or}}
         </div>
-
+        <!--
         <div class="card-text card-text--summary" data-test-info-type="summary">
             {{#if summary}}
                 {{{summary}}}
             {{/if}}
         </div>
+        -->
     </div>
     <div class="card-footer{{#if theme_settings.card_show_button}} _show{{/if}}" {{#unless theme_settings.card_show_button}}tabindex="0"{{/unless}}>
         <div class="card-buttons">

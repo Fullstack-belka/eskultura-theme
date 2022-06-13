@@ -3,11 +3,11 @@
         {{#if url}}
             <li class="breadcrumb {{#if @last}}is-active{{/if}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 {{#if @index '>' 0}}
-                    <svg class="icon"><use xlink:href="#icon-ih-arrow-right"></use></svg>
+                    <div class="breadcrumb_separator">/</div>
                 {{/if}}
                 <a data-instantload href="{{url}}" class="breadcrumb-label" itemprop="item" title="{{name}}">
                     {{#if @index '===' 0}}
-                        <svg class="icon"><use xlink:href="#icon-ih-small-home"></use></svg>
+                        <p class="home_breadcrumbs--home">Eskultura</p> 
                     {{/if}}
                     <span itemprop="name">{{name}}</span>
                     <meta itemprop="position" content="{{@index}}" />
@@ -15,8 +15,8 @@
             </li>
         {{else}}
             <li class="breadcrumb {{#if @last}}is-active{{/if}}">
-                <svg class="icon"><use xlink:href="#icon-ih-arrow-right"></use></svg>
-                <span class="breadcrumb-label">{{name}}</span>
+                <div class="breadcrumb_separator">/</div>
+                <span class="breadcrumb-label"> {{name}}</span>
             </li>
         {{/if}}
     {{/each}}

@@ -234,7 +234,7 @@
                             {{/filter}}
                         {{/if}}
 
-                        {{#if product.images.length '>' 1}}
+                        {{#if product.images.length '>' 3}}
                         <div class="productView-imageCarousel-nav" id="productView-imageCarousel-nav-{{product.id}}" data-image-gallery-nav data-image-gallery-nav-slides="{{theme_settings.productpage_thumbnails_count}}" {{#unless theme_settings.productpage_vertical_thumbnails}}data-image-gallery-nav-horizontal="true"{{/unless}}>
                             {{#each product.images}}
                                 <div class="productView-imageCarousel-nav-item{{#startsWith this.data ../product.main_image.data}} slick-current{{/startsWith}}">
