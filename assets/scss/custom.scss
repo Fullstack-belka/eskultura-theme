@@ -1,20 +1,18 @@
 
 
 @import "settings/global/color/color"; // 1
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 
 // PASTE CUSTOM STYLING HERE
- aside#faceted-search-container {
+aside#faceted-search-container {
         display:none;
     }
 
     a.powered-link {
     display: none!important;
 }
+
 h1.page-heading {text-align: center;width: 100%;padding: 7px;font-size: 5rem;text-transform: uppercase; letter-spacing: 5px;
 
     @media (max-width: screenSize("medium") - 1px) {
@@ -218,14 +216,16 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
 
 .home_breadcrumbs--home{color: stencilColor('color-primary'); margin-right: 5px; font-weight: bold;}
-.breadcrumb .breadcrumb-label{color: stencilColor('color-primary');font-family: 'Outfit';
+.breadcrumb .breadcrumb-label{
+    color: stencilColor('color-primary');
+    font-family: 'Outfit';
     font-size: .7rem;
-    @include breakpoint("medium") {
+    letter-spacing: 1px;
+    @media (max-width: screenSize("medium") - 1px) {
         font-size: 1rem;
-    }
-    
-    
-    letter-spacing: 1px;}
+    }  
+}
+
 .breadcrumb{
     .breadcrumb_separator{ margin: 0 4px; display: inline-block; }
 }
@@ -235,7 +235,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
     ._announce{
         font-size: .6rem;
-        @include breakpoint("medium") {
+        @media (max-width: screenSize("medium") - 1px) {
             font-size: .8rem;
         }
     }
@@ -252,7 +252,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
 .page-blog{
     
     .breadcrumbs{padding: 5px 15px; font-size: .8rem;}
-    @include breakpoint("medium") {
+    @media (max-width: screenSize("medium") - 1px) {
         .breadcrumbs{padding: 0 25px;}font-size: .8rem;
     }
    > .container{padding: 0; max-width: none;}
@@ -285,7 +285,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
     .card-title{
         font-size: .8rem;
-        @include breakpoint("medium") {
+       @media (max-width: screenSize("medium") - 1px) {
             font-size: 1rem;
         }
 
@@ -293,14 +293,14 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
     .card-text--reference{
         font-size: .7rem;
-        @include breakpoint("medium") {
+       @media (max-width: screenSize("medium") - 1px) {
             font-size: 1rem;
         }
 
     }
     .price--main{
         font-size: .7rem;
-        @include breakpoint("medium") {
+       @media (max-width: screenSize("medium") - 1px) {
             font-size: 1rem;
         }
     }
@@ -353,7 +353,7 @@ label.form-option.form-option-swatch {border-radius: 50%;}
     text-transform: uppercase; letter-spacing: 4px;
     font-size: 2rem;
     margin: 0;
-    @include breakpoint("medium") {
+   @media (max-width: screenSize("medium") - 1px) {
          font-size: 4rem;
     }
     
