@@ -3,10 +3,10 @@
         {{#if account_page '===' 'orders'}}
             {{#if page_type '===' 'account_order'}}
                 <li class="navBar-item is-active">
-                    <a class="navBar-action" href="{{urls.account.orders.all}}">{{lang 'account.nav.orders'}}</a>
+                    <a class="navBar-action" href="{{urls.account.orders.all}}"><i class="fa fa-archive" aria-hidden="true"></i> {{lang 'account.nav.orders'}}</a>
                 </li>
             {{else}}
-                <li class="navBar-item is-active">{{lang 'account.nav.orders'}}</li>
+                <li class="navBar-item is-active"><i class="fa fa-archive" aria-hidden="true"></i> {{lang 'account.nav.orders'}}</li>
             {{/if}}
         {{else}}
             <li class="navBar-item">
@@ -23,17 +23,17 @@
             {{/if}}
         {{/if}}
         {{#if account_page '===' 'messages'}}
-            <li class="navBar-item is-active">{{lang 'account.nav.messages' num_new_messages=customer.num_new_messages}}</li>
+            <li class="navBar-item is-active"><i class="fa fa-comments-o" aria-hidden="true"></i> {{lang 'account.nav.messages' num_new_messages=customer.num_new_messages}}</li>
         {{else}}
             <li class="navBar-item">
-                <a class="navBar-action" href="{{urls.account.inbox}}">{{lang 'account.nav.messages' num_new_messages=customer.num_new_messages}}</a>
+                <a class="navBar-action" href="{{urls.account.inbox}}"><i class="fa fa-comments-o" aria-hidden="true"></i> {{lang 'account.nav.messages' num_new_messages=customer.num_new_messages}}</a>
             </li>
         {{/if}}
         {{#if account_page '===' 'addresses'}}
-            <li class="navBar-item is-active">{{lang 'account.nav.addresses'}}</li>
+            <li class="navBar-item is-active"><i class="fa fa-map-marker" aria-hidden="true"></i> {{lang 'account.nav.addresses'}}</li>
         {{else}}
             <li class="navBar-item">
-                <a class="navBar-action" href="{{urls.account.addresses}}">{{lang 'account.nav.addresses'}}</a>
+                <a class="navBar-action" href="{{urls.account.addresses}}"><i class="fa fa-map-marker" aria-hidden="true"></i> {{lang 'account.nav.addresses'}}</a>
             </li>
         {{/if}}
         {{#if settings.show_payment_methods}}
@@ -47,10 +47,10 @@
         {{/if}}
         {{#if settings.show_wishlist}}
             {{#if account_page '===' 'wishlists'}}
-                <li class="navBar-item is-active">{{lang 'account.nav.wishlists' num_wishlists=customer.num_wishlists}}</li>
+                <li class="navBar-item is-active"><i class="fa fa-heart" aria-hidden="true"></i> {{lang 'account.nav.wishlists' num_wishlists=customer.num_wishlists}}</li>
             {{else}}
                 <li class="navBar-item">
-                    <a class="navBar-action" href="{{urls.account.wishlists.all}}">{{lang 'account.nav.wishlists' num_wishlists=customer.num_wishlists}}</a>
+                    <a class="navBar-action" href="{{urls.account.wishlists.all}}"><i class="fa fa-heart" aria-hidden="true"></i> {{lang 'account.nav.wishlists' num_wishlists=customer.num_wishlists}}</a>
                 </li>
             {{/if}}
         {{/if}}
@@ -62,14 +62,14 @@
             </li>
         {{/if}}
         {{#if account_page '===' 'settings'}}
-            <li class="navBar-item is-active">{{lang 'account.nav.settings'}}</li>
+            <li class="navBar-item is-active"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{lang 'account.nav.settings'}}</li>
         {{else}}
             <li class="navBar-item">
-                <a class="navBar-action" href="{{urls.account.details}}">{{lang 'account.nav.settings'}}</a>
+                <a class="navBar-action" href="{{urls.account.details}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{lang 'account.nav.settings'}}</a>
             </li>
         {{/if}}
         <li class="navBar-item">
-            <a class="navBar-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+            <a class="navBar-action" href="{{urls.auth.logout}}"><i class="fa fa-sign-out" aria-hidden="true"></i> {{lang 'common.logout'}}</a>
         </li>
     </ul>
 </nav>

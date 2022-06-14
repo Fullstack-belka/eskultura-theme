@@ -60,25 +60,30 @@
 .account-orderTotal {
     font-weight: $header-font-weight;
 }
-
+.account-container{
+    display: flex; flex-wrap: wrap;
+}
 .account-orderTotal-key,
 .account-orderTotal-value  {
     padding: spacing("half") 0;
 }
 
 .navBar--sub {
-    border: container("border");
-    border-radius: $global-radius;
+    
+    width: 30%;
     // background-color: container("fill", "dark");
     padding: 0 spacing("half");
     .navBar-section {
-        display: flex;
-        flex-wrap: wrap;
+       
     }
     .navBar-item {
+        text-align: left;
+        display: block;
+        float: none;
         border-right: container("border");
         margin: 0;
         &.is-active {
+            color: stencilColor("color-purple");
             padding: spacing("half");
             border-bottom: 0;
             .navBar-action {
@@ -95,6 +100,7 @@
         }
     }
     .navBar-action {
+        display: inline-block;
         padding: spacing("half");
     }
 }

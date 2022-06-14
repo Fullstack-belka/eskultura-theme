@@ -502,9 +502,11 @@
     <div data-also-bought-parent-scope class="productView-descriptionWrapper">
         <article class="productView-description">
             <ul class="tabs tabs--alt" data-tab>
+                <!--
                 <li class="tab tab--description is-active">
                     <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
                 </li>
+                -->
                 {{#if product.videos.list.length}}
                     <li class="tab tab--videos">
                         <a class="tab-title" href="#tab-videos">{{lang 'products.videos.header'}}</a>
@@ -540,19 +542,9 @@
                 {{/or}}
 
             </ul>
-            <div class="tab-content is-active" id="tab-description">
-                {{#unless in_quickview}}<div class="container">{{/unless}}
-                <h2 class="beautify__page-heading _hasToggle">{{lang 'products.description'}}</h2>
-                <button class="button button--plain button--toggle is-open" data-toggle="ih__desc-{{product.id}}">
-                    <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
-                    <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
-                </button>
-                <div class="productView-description-tabContent is-open" id="ih__desc-{{product.id}}" {{#if schema}} itemprop="description"{{/if}} {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
-                    {{{product.description}}}
-                    {{{snippet 'product_description'}}}
-                </div>
-                {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
-            </div>
+            
+
+            
             {{#if product.videos.list.length}}
                 <div class="tab-content" id="tab-videos">
                     {{#unless in_quickview}}<div class="container">{{/unless}}

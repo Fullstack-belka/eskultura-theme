@@ -91,7 +91,7 @@
             minmax(beautify__fontSize(13) * 1.5 + $card-text-marginBottom, max-content) // brand
             minmax(min-content, max-content) // swatches
             minmax(2rem, max-content) // price
-            ; // rating
+            minmax(1rem, max-content);  // rating
         .card-text--brand {
             grid-row: 2;
         }

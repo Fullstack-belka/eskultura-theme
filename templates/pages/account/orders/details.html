@@ -3,13 +3,18 @@
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 <h1 class="page-heading title">{{lang 'account.orders.details.heading' number=order.id}}</h1>
+
+<div class="account-container">
 {{> components/account/navigation account_page='orders'}}
 
-{{#each order.status_messages}}
-    {{> components/common/alert-info message}}
-{{/each}}
 
 <main class="beautify__orderDetails">
+
+    {{#each order.status_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+
+
     <div class="beautify__orderDetails-main">
         {{> components/account/order-contents order=order}}
 
@@ -144,5 +149,7 @@
         </section>
     </aside>
 </main>
+
+</div>
 {{/partial}}
 {{> layout/base}}

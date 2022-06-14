@@ -460,6 +460,10 @@ export default function (context) {
         });
     });
 
+    $(".facetedSearch-navList ._accordion-block").mouseleave(function(){
+       console.log('hola')
+    });
+
 
     $( document ).ready(function() {
         $('#categories-navList').slick({

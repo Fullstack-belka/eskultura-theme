@@ -9,7 +9,7 @@
                 {{> components/common/alert-error forms.create_account.error}}
             {{/if}}
             {{#if settings.account_creation_enabled}}
-                <form action="{{urls.auth.save_new_account}}" data-create-account-form method="post" class="form">
+                <form action="{{urls.auth.save_new_account}}" data-create-account-form method="post" class="form form-custom">
                     <div class="form-row form-row--half">
                         {{#each forms.create_account.account_fields }}
                             {{{dynamicComponent 'components/common/forms'}}}
@@ -23,6 +23,9 @@
                     {{{ forms.create_account.recaptcha.markup}}}
                     <div class="form-actions">
                         <input type="submit" class="button button--primary" value="{{lang 'forms.create_account.submit_value' }}" />
+                    </div>
+                    <div>
+                        <p>{{lang 'create_account.has_account' }} <a href="{{urls.auth.login}}" class="login-link">{{lang 'create_account.login' }}</a></p>
                     </div>
                 </form>
             {{/if}}

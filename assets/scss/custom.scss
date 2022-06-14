@@ -427,6 +427,10 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .content-404 .content-buttons li a {width: calc(100% - 20px);color: $color-primary;background-color: white;display: flex;text-decoration: unset;font-weight: bold;justify-content: center;margin: 0 10px;padding: 5px 10px; transition: .4s all; text-align: center;}
 .content-404 .content-buttons li a:hover{transform: scale(1.06); background-color: $color-primary; color: white;}
 
+//SEARCH PAGE
+ .page-search{
+        h1.page-heading{font-size: 2.3rem;}
+}
 
 @media screen and (max-width:800px){
 
@@ -500,3 +504,20 @@ p._heading {color: white!important;}
 
 // configuracion recuadro productos
 article.card._border._hideBtn.productSwatchesLoaded {border: none;}
+
+//CUSTOM FORM
+
+.form-custom {
+
+    .form-input,
+    input,
+    textarea,
+    select{
+        border: 0;
+        background-color: #FAF1FF;
+    }
+
+    .g-recaptcha{
+        > div{margin: auto;}
+    }
+}
