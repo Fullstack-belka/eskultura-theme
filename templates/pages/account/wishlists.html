@@ -5,7 +5,9 @@
         <h1 class="page-heading">{{lang 'account.wishlists.heading' }}</h1>
         <div class="account-container">
         {{> components/account/navigation account_page='wishlists'}}
-        {{> components/account/wishlist-list}}        
+            <main>
+                {{> components/account/wishlist-list}}   
+            </main>     
         </div>
     </div>
 {{/if}}

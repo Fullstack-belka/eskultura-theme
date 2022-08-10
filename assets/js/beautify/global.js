@@ -461,7 +461,7 @@ export default function (context) {
     });
 
     $(".facetedSearch-navList ._accordion-block").mouseleave(function(){
-       console.log('hola')
+       $(this).find('._accordion-content').removeClass('is-open');        
     });
 
 

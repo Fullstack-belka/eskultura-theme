@@ -10,7 +10,7 @@
             {{/if}}
         {{else}}
             <li class="navBar-item">
-                <a class="navBar-action" href="{{urls.account.orders.all}}">{{lang 'account.nav.orders'}}</a>
+                <a class="navBar-action" href="{{urls.account.orders.all}}"><i class="fa fa-archive" aria-hidden="true"></i>{{lang 'account.nav.orders'}}</a>
             </li>
         {{/if}}
         {{#if settings.returns_enabled}}
@@ -55,10 +55,10 @@
             {{/if}}
         {{/if}}
         {{#if account_page '===' 'recent_items'}}
-            <li class="navBar-item is-active">{{lang 'account.nav.recently_viewed'}}</li>
+            <li class="navBar-item is-active"><i class="fa fa-eye" aria-hidden="true"></i>{{lang 'account.nav.recently_viewed'}}</li>
         {{else}}
             <li class="navBar-item">
-                <a class="navBar-action" href="{{urls.account.recent_items}}">{{lang 'account.nav.recently_viewed'}}</a>
+                <a class="navBar-action" href="{{urls.account.recent_items}}"><i class="fa fa-eye" aria-hidden="true"></i>{{lang 'account.nav.recently_viewed'}}</a>
             </li>
         {{/if}}
         {{#if account_page '===' 'settings'}}

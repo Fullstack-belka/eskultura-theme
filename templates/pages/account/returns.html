@@ -2,15 +2,18 @@
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 <h1 class="page-heading">{{lang 'account.returns.heading' }}</h1>
-{{> components/account/navigation account_page='returns'}}
 
-<main>
-    {{#if customer.returns}}
-        {{> components/account/returns-list returns=customer.returns}}
-    {{else}}
-        {{> components/common/alert-info (lang 'account.returns.none')}}
-    {{/if}}
-</main>
+<div class="account-container">
+    {{> components/account/navigation account_page='returns'}}
+
+    <main>
+        {{#if customer.returns}}
+            {{> components/account/returns-list returns=customer.returns}}
+        {{else}}
+            {{> components/common/alert-info (lang 'account.returns.none')}}
+        {{/if}}
+    </main>
+</div>
 
 {{/partial}}
 {{> layout/base}}

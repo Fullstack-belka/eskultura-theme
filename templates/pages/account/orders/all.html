@@ -10,7 +10,7 @@ customer:
 <h1 class="page-heading">{{lang 'account.orders.heading' }}</h1>
 <div class="account-container">
 {{> components/account/navigation account_page='orders'}}
-    <div>
+    <main>
     {{#if customer.store_credit.value '>' 0}}
         <div class="account-head">
             <div class="alertBox alertBox--storeCredit">
@@ -18,16 +18,16 @@ customer:
             </div>
         </div>
     {{/if}}
-    <main>
+    
         {{#if customer.orders.length}}
             {{> components/account/orders-list orders=customer.orders}}
             {{> components/common/paginator pagination.orders}}
         {{else}}
             {{> components/common/alert-info (lang 'account.orders.none')}}
         {{/if}}
+        {{{snippet 'account'}}}
     </main>
-    {{{snippet 'account'}}}
-    </div>
+    
 </div>
 
 {{/partial}}

@@ -70,6 +70,8 @@ div#bf-fix-menu-mobile{
 
 }
 .navPages-action:hover, .navPages-action:focus, .navPages-action:active{color: white;}
+
+.navPages-container .navPages a.navPages-action{text-transform: uppercase;}
 a.navPages-action {color: white; font-weight: 400;}
 a.navPages-action:hover{
     color: #E7BDFE;
@@ -189,7 +191,10 @@ a.navPages-action:hover{color: #E7BDFE;}
 .card-figcaption-button:hover{background-color: stencilColor("color-primary");}
 .footer .container{width: 100%;max-width: 1200px;margin: auto;padding: 35px 0px; color: #54387F;  display: flex; justify-content: center; flex-wrap: wrap;}
 .footer .container .box{position: relative;  padding: 0 30px; width: 20%;}
-
+.footer .copyright{background-color: stencilColor("color-primary"); text-align: center; font-size: .8rem; color: white; padding: 10px;}
+.footer .copyright img{}
+.footer .copyright a{color: white;}
+.footer .copyright a:hover{color: white;}
 .footer .container .box::after{content:''; display: flex; height: 100px; width: 1px; background-color: stencilColor("color-primary"); position: absolute; right: 0; top: 0;}
 .footer .container .box:last-child:after{content:unset;}
 
@@ -200,6 +205,46 @@ a.navPages-action:hover{color: #E7BDFE;}
 .footer .container .box ul.red-social{display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; margin-top: 30px;}
 .footer .container .box ul.info-shop li i{width: 20px; margin-right: 2px; text-align: center;}
 .footer .container .box h3{ margin-top: 0;}
+
+/* WHATSAPP FLOTANTE */
+
+/*Fixed Buttons*/
+.whatsapp-floating-button{
+    z-index: 2;
+    position: fixed;
+    bottom: 6px;
+    left: 16px;
+    display: block;
+    transition: transform .5s ease;
+  }
+.whatsapp-floating-button img{
+animation: ring 1.5s infinite ease;
+-webkit-animation: ring 1.5s infinite ease;
+}
+
+@keyframes ring {
+    0% {
+      transform: rotate(0) scale(1) skew(1deg)
+    }
+    10% {
+      transform: rotate(-10deg) scale(1) skew(1deg)
+    }
+    20% {
+      transform: rotate(10deg) scale(1) skew(1deg)
+    }
+    30% {
+      transform: rotate(-10deg) scale(1) skew(1deg)
+    }
+    40% {
+      transform: rotate(10deg) scale(1) skew(1deg)
+    }
+    50% {
+      transform: rotate(0) scale(1) skew(1deg)
+    }
+    100% {
+      transform: rotate(0) scale(1) skew(1deg)
+    }
+  }
 
 @media screen and (max-width:800px){
     .footer .container .box{width: 100%; padding: 20px 25px;}
@@ -221,7 +266,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
     font-family: 'Outfit';
     font-size: .7rem;
     letter-spacing: 1px;
-    @media (max-width: screenSize("medium") - 1px) {
+    @media (min-width: screenSize("medium") - 1px) {
         font-size: 1rem;
     }  
 }
@@ -235,7 +280,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
     ._announce{
         font-size: .6rem;
-        @media (max-width: screenSize("medium") - 1px) {
+        @media (min-width: screenSize("medium") - 1px) {
             font-size: .8rem;
         }
     }
@@ -252,7 +297,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
 .page-blog{
     
     .breadcrumbs{padding: 5px 15px; font-size: .8rem;}
-    @media (max-width: screenSize("medium") - 1px) {
+    @media (min-width: screenSize("medium") - 1px) {
         .breadcrumbs{padding: 0 25px;}font-size: .8rem;
     }
    > .container{padding: 0; max-width: none;}
@@ -285,7 +330,7 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
     .card-title{
         font-size: .8rem;
-       @media (max-width: screenSize("medium") - 1px) {
+       @media (min-width: screenSize("medium") - 1px) {
             font-size: 1rem;
         }
 
@@ -293,14 +338,14 @@ ul.socialLinks.socialLinks--alt {display: none;}
 
     .card-text--reference{
         font-size: .7rem;
-       @media (max-width: screenSize("medium") - 1px) {
+       @media (min-width: screenSize("medium") - 1px) {
             font-size: 1rem;
         }
 
     }
     .price--main{
         font-size: .7rem;
-       @media (max-width: screenSize("medium") - 1px) {
+       @media (min-width: screenSize("medium") - 1px) {
             font-size: 1rem;
         }
     }
@@ -353,7 +398,7 @@ label.form-option.form-option-swatch {border-radius: 50%;}
     text-transform: uppercase; letter-spacing: 4px;
     font-size: 2rem;
     margin: 0;
-   @media (max-width: screenSize("medium") - 1px) {
+   @media (min-width: screenSize("medium") - 1px) {
          font-size: 4rem;
     }
     
@@ -385,6 +430,7 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 .reviews-comments .productReviews-list li.productReview article .productReview-body{width: 100%;}
 
 .page-product .beautify__page-heading{color: stencilColor('color-purple');}
+.page-product .beautify__page-lead{text-align: center; font-size: 1.4rem; color: stencilColor('color-purple') ;opacity: .8;}
 
 
 // NEWSLETTER

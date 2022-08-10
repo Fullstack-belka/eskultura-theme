@@ -5,16 +5,17 @@
 
 <div class="account-container">
     {{> components/account/navigation account_page='settings'}}
-
-    <div class="account">
-        {{#if forms.edit_account.error}}
-        {{> components/common/alert-error forms.edit_account.error}}
-        {{/if}}
-        {{#if forms.edit_account.success}}
-        {{> components/common/alert-success forms.edit_account.success}}
-        {{/if}}
-        {{> components/account/edit-account}}
-    </div>
+    <main>
+        <div class="account">
+            {{#if forms.edit_account.error}}
+            {{> components/common/alert-error forms.edit_account.error}}
+            {{/if}}
+            {{#if forms.edit_account.success}}
+            {{> components/common/alert-success forms.edit_account.success}}
+            {{/if}}
+            {{> components/account/edit-account}}
+        </div>
+    </main>
 </div>
 {{/partial}}
 {{> layout/base}}

@@ -2,15 +2,24 @@
 <div class="account">
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     <h1 class="page-heading">{{lang 'account.recent_items.heading' }}</h1>
+
+    <div class="account-container">
+
+    
     {{> components/account/navigation account_page='recent_items'}}
 
-    {{#unless customer.recently_viewed_products.items}}
-        {{> components/common/alert-info (lang 'account.recent_items.no_items')}}
-    {{/unless}}
+    <main>
+        {{#unless customer.recently_viewed_products.items}}
+            {{> components/common/alert-info (lang 'account.recent_items.no_items')}}
+        {{/unless}}
 
-    <form action="{{urls.compare}}" method="post">
-        {{> components/products/grid products=customer.recently_viewed_products.items show_compare=customer.recently_viewed_products.show_compare}}
-    </form>
+        <form action="{{urls.compare}}" method="post">
+            {{> components/products/grid products=customer.recently_viewed_products.items show_compare=customer.recently_viewed_products.show_compare}}
+        </form>
+    </main>
+
+    </div>
+
 </div>
 {{/partial}}
 {{> layout/base}}
