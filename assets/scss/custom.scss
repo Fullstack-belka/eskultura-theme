@@ -212,8 +212,8 @@ a.navPages-action:hover{color: #E7BDFE;}
 .whatsapp-floating-button{
     z-index: 2;
     position: fixed;
-    bottom: 6px;
-    left: 16px;
+    bottom: 16px;
+    right: 16px;
     display: block;
     transition: transform .5s ease;
   }
