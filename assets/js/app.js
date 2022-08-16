@@ -4,6 +4,7 @@ import 'regenerator-runtime/runtime';
 import 'wicg-inert';
 import Global from './theme/global';
 
+
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
 const noop = null;
@@ -112,3 +113,6 @@ window.stencilBootstrap = function stencilBootstrap(pageType, contextJSON = null
 if (window.stencilBootstrapReady && typeof window.stencilBootstrapReady === 'function') {
     window.stencilBootstrapReady();
 }
+
+
+import TIP from './theme/tipificacion';

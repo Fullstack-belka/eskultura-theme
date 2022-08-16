@@ -68,7 +68,7 @@
         &._hideBtn {
             .productCarousel &,
             .productGrid & {
-                padding-bottom: spacing("single");
+                padding-bottom: spacing("single")*2;
             }
         }
         &:hover {
