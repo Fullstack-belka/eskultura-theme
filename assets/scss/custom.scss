@@ -567,3 +567,19 @@ article.card._border._hideBtn.productSwatchesLoaded {border: none;}
         > div{margin: auto;}
     }
 }
+
+
+// FAQ - PAGE
+
+.response-item .container-tittle{margin-bottom: 20px;}
+.response-item .container-tittle h3{font-size: 1.6rem; color: #a50cfd;}
+.response-item .response{display: flex;z-index: 0;background-color: #e5e5e5;padding: 15px; align-items: center;}
+.response-item .response *{color: #5e408f; font-weight: bold;}
+
+.response-item .response .container-rta{font-size: 2rem; padding: 10px 30px;}
+
+
+@media screen and (max-width:800px){
+    .response-item .response{flex-wrap: wrap;}
+    .response-item .response .container-rta{padding: 10px 0;}
+}
