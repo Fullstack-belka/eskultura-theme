@@ -1,5 +1,11 @@
 <article class="blog {{#if show_tags}}{{#if post.tags}}blog--has-tags{{/if}}{{/if}} {{#unless hide_social_icons}}blog--has-socials{{/unless}}">
     <div class="blog-post-figure">
+        {{#if single}}
+        <div class="blog-info">
+            <h1 class="blog-heading">{{ blog.post.title }}</h1>
+            <div class="blog-date"><span class="blog-date-date">{{post.date_published}}{{#if post.author}}</span> <span class="blog-date-author">{{lang 'blog.posted_by' name=post.author}}{{/if}}</span></div>
+        </div>
+        {{/if}}
         {{#if post.thumbnail}}
             <figure class="blog-thumbnail">
                 <a data-instantload href="{{post.url}}">
@@ -9,9 +15,7 @@
                 </a>
             </figure>
         {{/if}}
-        {{#if single}}
-        <h1 class="blog-heading">{{ blog.post.title }}</h1>
-        {{/if}}
+
     </div>
 
     <div class="blog-post-body">

@@ -285,5 +285,15 @@
 
 }
 .page-blog_post{
-    .blog-heading{font-size: 2rem; color:  stencilColor("color-primary"); text-align: left; text-transform: uppercase;}
+    .beautify__recentBlog{background-color: white;}
+    .d-flex{display: flex;}
+    .flex-wrap{flex-wrap: wrap;}
+    .blog-thumbnail{width: 50%;}
+    .blog-info{ width: 50%; .blog-date{padding: 0 25px; text-align: center;}} 
+    .blog-heading{font-size: 2rem; text-align: center; text-transform: uppercase;} 
+    .blog-post *:not(h1,h2,h3,h4,h5){font-size: 1.4rem;}
+    h1, h2, h3, h4, h5, h6{color:  stencilColor("color-primary");}
+    h2{font-size: 1.8rem;}
+    h3{font-size: 1.6rem;}
+    .blog-post-figure{display: flex; flex-wrap: wrap;}
 }
