@@ -845,6 +845,7 @@
 
     @media (max-width: screenSize("medium") - 1px) {
         margin-bottom: spacing("half");
+        font-size: beautify__fontSize(20);
     }
     @include breakpoint("medium") {
         margin-bottom: spacing("base");

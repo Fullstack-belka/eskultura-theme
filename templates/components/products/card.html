@@ -90,7 +90,8 @@
             -->
         </div>
     </div>
-    <div class="card-footer{{#if theme_settings.card_show_button}} _show{{/if}}" {{#unless theme_settings.card_show_button}}tabindex="0"{{/unless}}>
+    <!--
+        <div class="card-footer{{#if theme_settings.card_show_button}} _show{{/if}}" {{#unless theme_settings.card_show_button}}tabindex="0"{{/unless}}>
         <div class="card-buttons">
                 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                     {{#if show_cart_action}}
@@ -125,19 +126,8 @@
                         data-compare-title="{{name}}"
                     ><svg class="icon"><use xlink:href="#icon-compare"></use></svg>{{lang 'products.compare'}}</button>
                 {{/if}}
-
-                {{!--
-                <!--
-                {{#unless hide_product_quick_view}}
-                    {{#if theme_settings.show_product_quick_view}}
-                        <a class="button card-figcaption-button quickview" tabindex="0" {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}} data-product-id="{{id}}"><svg class="icon"><use xlink:href="#icon-bs-search"></use></svg>{{lang 'products.quick_view'}}</a>
-                    {{/if}}
-                {{/unless}}
-                -->
-                --}}
-            </div>
-    </div>
-
+        </div>
+    -->
     {{#if show_bulk_order}}
     <div class="card-bulkOrder">
         <div class="card-bulkOrder-fieldRow card-bulkOrder-qtyInCart">

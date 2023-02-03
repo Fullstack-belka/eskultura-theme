@@ -247,7 +247,19 @@
                             {{/each}}
                         </div>
                         {{/if}}
-
+                        
+                        {{#unless in_quickview}}
+                        <div class="container">
+                        {{/unless}}
+                            <h2 class="beautify__page-heading productView-title-detail">{{lang 'products.description'}}</h2>
+                            <div class="productView-description-tabContent is-open" id="ih__desc-{{product.id}}" {{#if schema}} itemprop="description"{{/if}} {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
+                                {{{product.description}}}
+                                {{{snippet 'product_description'}}}
+                            </div>
+                            {{#unless in_quickview}}
+                        </div><!-- .container -->
+                        
+                        
                         {{>components/common/share url=product.url}}
                     </section>
 
@@ -373,21 +385,9 @@
                                 </div>
                                 
 
-                                {{#unless in_quickview}}
-                                <hr class="productView-separator">
-                                <div class="container">{{/unless}}
-                                    <h2 class="beautify__page-heading productView-title-detail">{{lang 'products.description'}}</h2>
-                                    <button class="button button--plain button--toggle is-open" data-toggle="ih__desc-{{product.id}}">
-                                        <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
-                                        <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
-                                    </button>
-                                    <div class="productView-description-tabContent is-open" id="ih__desc-{{product.id}}" {{#if schema}} itemprop="description"{{/if}} {{#if settings.data_tag_enabled}} data-event-type="product" {{/if}}>
-                                        {{{product.description}}}
-                                        {{{snippet 'product_description'}}}
-                                    </div>
-                                    {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
+                                    
+                                    {{/unless}}
 
-                                <hr class="productView-separator">
                                 <div class="container productView-shipping">
                                     {{#if product.availability}}
                                     <div class="productView-availability">
@@ -537,12 +537,6 @@
                         <a class="tab-title" href="#tab-warranty">{{lang 'products.warranty'}}</a>
                     </li>
                 {{/if}}
-                {{#or in_development theme_settings.productpage_delivery_tab}}
-                    <li class="tab tab--return">
-                        <a class="tab-title" href="#tab-return">{{theme_settings.productpage_delivery_tab_title}}</a>
-                    </li>
-                {{/or}}
-
             </ul>
             
 
@@ -646,50 +640,7 @@
                     {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
                 </div>
             {{/if}}
-
-            {{#or in_development theme_settings.productpage_delivery_tab}}
-                <div class="tab-content" id="tab-return">
-                    {{#unless in_quickview}}<div class="container">{{/unless}}
-                    <h2 class="beautify__page-heading _hasToggle">{{theme_settings.productpage_delivery_tab_title}}</h2>
-                    <button class="button button--plain button--toggle is-open" data-toggle="ih__return-{{product.id}}">
-                        <span class="on">{{lang 'common.hide'}} <svg class="icon"><use xlink:href="#icon-minus"></use></svg></span>
-                        <span class="off">{{lang 'common.show'}} <svg class="icon"><use xlink:href="#icon-add"></use></svg></span>
-                    </button>
-                    <div class="productView-description-tabContent is-open" id="ih__return-{{product.id}}">
-                        {{{region name="product_delivery_tab_content--global"}}}
-                        {{{region name="product_delivery_tab_content"}}}
-                        {{#if in_development}}
-                            <p class="beautify__anpost">
-                                <img class="lazyload" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='82' height='55'%3E%3C/svg%3E" data-src="{{cdn 'img/beautify/anpost.png'}}" data-sizes="auto" width="82" height="55" alt="An Post">
-                                <span class="_text">All Orders delivered for just €4.99 To anywhere in Ireland and Northern Ireland</span>
-                            </p>
-                            <ul>
-                                <li>NEXT DAY DELIVERY IRELAND</li>
-                                <li>SMS and Email Alerts</li>
-                                <li>Order before 2pm for same day dispatch</li>
-                                <li>98% of all orders are delivered next day</li>
-                            </ul>
-                            <p>Your order will leave our warehouse in Bray, Co Wicklow and be delivered the <strong>next working day</strong>. You will receive SMS &amp; email tracking updates from An Post and someone will need to sign for the parcel on delivery.</p>
-                            <ul>
-                                <li>For full Delivery Terms visit our <a  href="/delivery-returns/">Delivery Page</a></li>
-                                <li>For hassle free returns visit our&nbsp;<a  title="returns" href="/delivery-returns/">Returns Section</a></li>
-                            </ul>
-                            <p class="_payment-icons">
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/secure.png') alt="secure"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/pci.png') alt="pci"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/trustmark.png') alt="trustmark"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/eccomerce-europe.png') alt="eccomerce-europe"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/ecommerce-2.png') alt="ecommerce-2"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/mastercard.png') alt="mastercard"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/visa.png') alt="visa"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/paypal.png') alt="paypal"}}</span>
-                                <span>{{> components/common/responsive-img image=(cdn 'img/beautify/oneforall.png') alt="oneforall"}}</span>
-                            </p>
-                        {{/if}}
-                    </div>
-                    {{#unless in_quickview}}</div><!-- .container -->{{/unless}}
-                </div>
-            {{/or}}
+      
         </article>
     </div>
 </div>

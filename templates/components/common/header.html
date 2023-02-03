@@ -18,13 +18,11 @@
 </div>
 {{/or}}
 <header class="header" role="banner" {{#if theme_settings.header_sticky}} data-sticky-header{{/if}}>
-
     <div class="beautify__topHeader">
         <div class="container">
             <div class="_announce">
                 {{{region name="header_top_announcement--global"}}}
-            </div>
-            
+            </div>            
         </div>
     </div>
     <div class="beautify__mainHeader{{#if settings.store_logo.image}} _hasImg{{/if}} _{{theme_settings.logo_position}}">
@@ -163,6 +161,10 @@
                     <div class="dropdown-menu" id="cart-preview-dropdown" aria-hidden="true"></div>
                 </li>
                 </div>    
+                <div class="_logo_fajitex">
+                    <img src="{{cdn 'assets/img/fajitex_brand.png'}}" class="desktop" alt="Fajas colombianas | Fajitex | Productos 100% colombianos" width="100px" height="50px">
+                    <img src="{{cdn 'assets/img/fajitex_brand_mob.png'}}" class="mobile" alt="Fajas colombianas | Fajitex | Productos 100% colombianos" width="100px" height="50px">
+                </div>
             </div>
       
         </div>
