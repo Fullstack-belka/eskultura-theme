@@ -553,14 +553,24 @@ label.form-option.form-option-swatch {border-radius: 50%;}
 // vista categoria prodcuto
 div#facetedSearch {
     display: flex; flex-wrap: wrap;
+    width: 60%;
+    .facetedSearch-refineFilters.sidebarBlock{order:2;}
     ._accordion._accordion--navList {
         display: flex;flex-wrap: wrap;
     }
-    .facetedSearch ._accordion-content {position: absolute; z-index: 3; background: white; padding: 10px 15px; }
-
+    ._accordion-content {position: absolute; z-index: 3;
+        min-width: 200px; background: white; padding: 10px 15px;
+        box-shadow: -1px 5px 6px 3px #a9a9a945;
+    }
+    #facetedSearch-navList{order: 2;}
 
     @media (max-width: screenSize("medium") - 1px) {
+        width: 100%;
         display: block;
+        ._accordion-content{
+            box-shadow: unset;
+            min-width: 0;
+        }
         ._accordion._accordion--navList {
             display: block;
         }
