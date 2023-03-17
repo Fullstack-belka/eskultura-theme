@@ -405,6 +405,13 @@
 
                                 <hr class="productView-separator">
 
+                                <div class="container-other-ctas">
+                                    <div class="form-button">
+                                        <a href="https://api.whatsapp.com/send?phone=+19396083102&text=%C2%A1Hola,%20chicas%20Eskultura!💌+quiero+comprar+a+crédito+con+Layaway+{{ product.title}}" class="button_cta_product layaway_button">Compra a crédito con Layaway</a>
+                                        <a href="https://api.whatsapp.com/send?phone=+19396083102&text=%C2%A1Hola,%20chicas%20Eskultura!💚+quiero+comprar+{{ product.title }}" class="button_cta_product whatsapp_button">Compra por Whatsapp <i class="fa fa-whatsapp"></i></a>
+                                    </div>
+                                </div>
+
                                 <div class="productView-qtyAddWrapper _addToCartVisibility{{#if theme_settings.productpage_sticky_addtocart}} _sticky{{/if}}" {{#unless product.can_purchase}}style="display:none"{{/unless}}>
                                     {{#if theme_settings.show_product_quantity_box}}
                                         <div class="form-field form-field--increments">
@@ -440,6 +447,8 @@
                                         </div>
                                     {{/if}}
                                     {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+
+                                    
                                         <div class="form-action form-action--addToCart">
                                             {{#or product.price.with_tax product.price.without_tax}}
                                                 <div class="price-section" style="display: none;">

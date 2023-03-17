@@ -305,7 +305,7 @@ h3 {color: #54387F;font-size: 0.8rem;font-weight: bold;margin-bottom: 15px;}
 .beautify__topHeader ._announce p{
 
     @media (max-width: screenSize("medium") - 1px) {
-        font-size: 1rem !important;
+        font-size: .7rem !important;
        *{ font-size: inherit}
     }
 }
@@ -549,6 +549,12 @@ label.form-option.form-option-swatch {border-radius: 50%;}
     .content-404 .content-buttons li a{text-align: center;}
 }
 
+.button_cta_product{display: block;padding: 10px;  transition: .4s all; margin-bottom: 15px; color: white; text-decoration: unset;font-size: 1rem; border-radius: 3px;  text-align: center;}
+.button_cta_product:hover{color: white !important;}
+.button_cta_product.layaway_button{background-color: #C96FDE;   }
+.button_cta_product.whatsapp_button{background-color: #30BF39;}
+.button_cta_product.layaway_button:hover,
+.button_cta_product.whatsapp_button:hover{background-color: #54387F;}
 
 // vista categoria prodcuto
 div#facetedSearch {
